@@ -1,0 +1,70 @@
+<header [class]="headerStyle + ' header sticky-bar'" [ngClass]="scroll ? 'stick' : ''">
+  <div *ngIf="headerStyle.includes('header-type-2')" class="w-full header-contact mb-10">
+    <div class="container">
+      <div class="header-contact-info">
+        <div class="color-white">
+          <span>66 avenue des Champs, 75008, Paris, France</span>
+        </div>
+        <div class="color-green-100 info-color pl-10">
+          <span>(+01) - 456 789</span>
+          <span class="px-2 color-white">|</span>
+          <br class="visible-phone visible-tablet" />
+          <span>vzenlabs@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main-header">
+      <div class="header-left">
+        <div class="header-logo">
+          <a routerLink="/" class="d-flex">
+            <img *ngIf="headerStyle" width="{187}" height="{50}" alt="Moirai" src="{{
+								headerStyle.includes('normal-logo')
+									? '/assets/images/template/logo.svg'
+									: '/assets/images/template/logo-white.svg'
+							}}" />
+            <img *ngIf="!headerStyle" width="{187}" height="{50}" alt="Moirai" src="/assets/imgs/template/logo.svg" />
+          </a>
+        </div>
+        <div class="header-nav">
+          <nav class="nav-main-menu d-none d-xl-block">
+            <ul class="main-menu">
+              <li *ngFor="let header of headers" [class]="header.children && 'has-children cursor-pointer'">
+                <a *ngIf="header.url" [routerLink]="header.url">{{
+                  header.content
+                  }}</a>
+                <a *ngIf="header.children">{{ header.content }}</a>
+                <ul class="sub-menu" [ngClass]="header.twoCol ? 'two-col' : ''" *ngIf="header.children">
+                  <li *ngFor="let homepage of header.children">
+                    <a [routerLink]="homepage.url">
+                      <i [class]="homepage.icon"></i>{{ homepage.content }}
+                    </a>
+                  </li>
+                  <li className="hr"></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger-icon visible-tablet visible-phone" [ngClass]="
+							headerStyle.includes('burger-white') ? 'burger-icon-white' : ''
+						" onClick="{handleOpen}">
+            <span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span
+              class="burger-icon-bottom"></span>
+          </div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="block-signin">
+          <a routerLink="/auth/page-signup" [ngClass]="
+							headerStyle.includes('header-btn-black')
+								? 'btn-black'
+								: headerStyle.includes('header-btn-gray')
+								? 'btn-gray'
+								: 'btn-green-900'
+						" class="btn btn-black hover-up icon-arrow-right-white">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

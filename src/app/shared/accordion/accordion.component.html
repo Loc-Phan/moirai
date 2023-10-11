@@ -1,0 +1,24 @@
+<div class="accordion" id="accordionFAQ">
+  <div *ngFor="let item of accordionData; let i = index" class="accordion-item" key="{i}">
+    <h2 class="accordion-header" (click)="handleToggle(i)">
+      <button [class]="
+					isActive === i
+						? 'accordion-button text-heading-5'
+						: 'accordion-button text-heading-5 collapsed'
+				" [ngClass]="isActive !== i ? accordionStyle : ''">
+        {{ item.title }}
+      </button>
+    </h2>
+    <div [class]="
+				isActive === i
+					? 'accordion-collapse collapse show'
+					: 'accordion-collapse collapse'
+			">
+      <div *ngIf="item.content" class="accordion-body">{{item.content}}</div>
+      <ul *ngIf="item.listContent" class="list-style-disc ml-40">
+        <li *ngFor="let li of item.listContent" class="ms-1">{{ li }}</li>
+      </ul>
+      <div class="accordion-body"></div>
+    </div>
+  </div>
+</div>

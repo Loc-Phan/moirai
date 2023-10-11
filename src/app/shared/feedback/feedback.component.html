@@ -1,0 +1,32 @@
+<section class="section-box pb-20 mt-100" [ngClass]="feedbackStyle">
+  <div class="container mt-60">
+    <div class="row">
+      <div class="col-lg-5 mb-30"><span class="tag-1 color-gray-900">{{tag}}</span>
+        <h3 class="text-heading-1 mt-30">{{title}}</h3>
+        <p class="text-body-lead-large mt-30">{{description}}</p>
+        <div class="mt-40">
+          <a routerLink="/page-contact" class="btn btn-black icon-arrow-right-white">Learn More</a>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
+          <div *ngFor="let fb of feedbackData" class="col-lg-6 col-md-6 col-sm-12" key={i}>
+            <div class="card-grid-style-2 card-square hover-up mb-20 feedback-card">
+              <p class="text-body-text color-gray-600 text-comment">
+                {{fb.content}}
+              </p>
+              <div class="box-img-user">
+                <div class="img-user img-user-round">
+                  <img width={80} height={80} [src]="'/assets/images/page/homepage2/'+fb.avatarUrl+'.png'"
+                    alt="Moirai" />
+                </div>
+                <h4 class="text-body-lead color-gray-900 mb-5">{{fb.username}}</h4>
+                <p class="text-body-text-md">{{fb.job}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

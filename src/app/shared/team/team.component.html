@@ -1,0 +1,32 @@
+<div class="box-swiper">
+  <div class="swiper-container swiper-group-1">
+    <swiper [config]="swiperConfig" class="swiper-wrapper pt-5">
+      <ng-template *ngFor="let mock of [1, 2, 3, 4]" swiperSlide>
+        <div class="swiper-slide active">
+          <div class="row">
+            <div *ngFor="let subItem of teams" class="col-lg-3 col-md-6 col-sm-12">
+              <div class="card-grid-style-5 hover-up">
+                <div class="grid-5-img mb-15">
+                  <img width="{450}" height="{418}" [src]="subItem.avatar" alt="Moirai" />
+                </div>
+                <span class="text-body-text-md color-gray-500">{{
+                  subItem.title
+                  }}</span>
+                <h3 class="text-heading-5 mb-5 mt-5">{{ subItem.name }}</h3>
+                <p class="text-body-excerpt text-desc color-gray-500 mt-15 mb-20">
+                  {{ subItem.description }}
+                </p>
+                <span class="text-body-text-md color-gray-600">Let’s Connect</span>
+                <div class="social-bottom">
+                  <a *ngFor="let social of subItem.social" [routerLink]="social.url" [class]="social.icon"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+  <div class="swiper-button-next team-swiper-button-next-4"></div>
+  <div class="swiper-button-prev team-swiper-button-prev-4"></div>
+</div>

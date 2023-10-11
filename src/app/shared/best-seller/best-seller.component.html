@@ -1,0 +1,78 @@
+<section class="section-box mt-100 mb-50">
+  <div class="container mt-70">
+    <div class="row">
+      <div *ngIf="!imagesRight" class="col-lg-6 col-sm-12 block-we-do">
+        <div *ngIf="bestSellerData.images.length === 1">
+          <img width="{700}" height="{811}" class="bdrd-16 img-responsive" [src]="bestSellerData.images[0]"
+            alt="Moirai" />
+        </div>
+        <div *ngIf="bestSellerData.images.length === 2">
+          <div *ngIf="smallImgTop; else notSmallImgTop">
+            <div class="inner-image block-image-main bdrd-16">
+              <img width="{576}" height="{655}" [src]="bestSellerData.images[0]" alt="Moirai" />
+              <div class="block-image-top bdrd-16 flex">
+                <img width="{313}" height="{329}" [src]="bestSellerData.images[1]" alt="Moirai" />
+              </div>
+            </div>
+          </div>
+          <ng-template #notSmallImgTop class="col-lg-6 col-sm-12 block-we-do">
+            <div class="inner-image">
+              <img width="{608}" height="{702}" class="bdrd-16 img-responsive" src="{BestSellerData.images[0]}"
+                alt="Moirai" />
+              <div class="block-image-bottom">
+                <img width="{313}" height="{330}" class="bdrd-16 img-responsive" src="{BestSellerData.images[1]}"
+                  alt="Moirai" />
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 block-we-do">
+        <span *ngIf="bestSellerData.tag" class="tag-1" [ngClass]="style.tagColor">{{ bestSellerData.tag }}</span>
+        <h3 class="text-heading-1 mt-30" [ngClass]="style.title">
+          {{ bestSellerData.title }}
+        </h3>
+        <p class="text-body-lead-large color-gray-600 mt-30">
+          {{ bestSellerData.description }}
+        </p>
+        <div class="mt-50" [ngClass]="style.dashLine"></div>
+        <div class="row">
+          <div *ngFor="let content of bestSellerData.content" class="col-lg-6 col-sm-6 col-12 mt-50" key="{content.id}">
+            <h4 class="text-heading-6" [ngClass]="style.letterIcon">
+              {{ content.title }}
+            </h4>
+            <p *ngIf="content.text" class="text-body-excerpt color-gray-600 mt-15">
+              {{ content.text }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="imagesRight" class="col-lg-6 col-sm-12 block-img-we-do">
+        <div *ngIf="bestSellerData.images.length === 1">
+          <img width="{700}" height="{811}" class="bdrd-16 img-responsive" src="{BestSellerData.images[0]}"
+            alt="Moirai" />
+        </div>
+        <div *ngIf="bestSellerData.images.length === 2">
+          <div *ngIf="smallImgTop; else largeImgTop">
+            <div class="inner-image block-image-main bdrd-16">
+              <img width="{576}" height="{655}" src="{BestSellerData.images[0]}" alt="Moirai" />
+              <div class="block-image-top bdrd-16 flex">
+                <img width="{313}" height="{329}" src="{BestSellerData.images[1]}" alt="Moirai" />
+              </div>
+            </div>
+          </div>
+          <ng-template #largeImgTop class="col-lg-6 col-sm-12 block-we-do">
+            <div class="inner-image">
+              <img width="{608}" height="{702}" class="bdrd-16 img-responsive" src="bestSellerData.images[0]"
+                alt="Moirai" />
+              <div class="block-image-bottom">
+                <img width="{313}" height="{330}" class="bdrd-16 img-responsive" [src]="bestSellerData.images[1]"
+                  alt="Moirai" />
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
