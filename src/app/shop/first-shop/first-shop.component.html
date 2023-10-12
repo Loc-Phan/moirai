@@ -1,1 +1,250 @@
-first-shopping
+<div>
+  <section class="section-box">
+    <div class="banner-hero banner-breadcrums bg-gray-100">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="text-display-3 color-gray-900 mb-20">
+              Shop 1
+            </h1>
+            <p class="text-heading-6 color-gray-600 mb-20">
+              Welcome to our fashion shop, a haven for style enthusiasts
+              and <br /> trendsetters. Step into our virtual boutique and
+              immerse yourself in a <br /> world of fashion and style.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-box mt-80">
+    <div class="container mt-70">
+      <div class="row">
+        <h2 class="text-heading-1 color-gray-900">
+          Shopping by category
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="text-body-lead-large color-gray-600 mt-20">
+            We offer a carefully curated collection of clothing,
+            accessories, and more, designed to help you express your
+            unique personality and elevate your fashion game.
+          </p>
+        </div>
+        <div class="col-lg-6 text-end md-text-left">
+
+          <a routerLink="/auth/page-signup" class="btn btn-default hover-up icon-arrow-right mt-10">
+            Browse All
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-60">
+      <div class="row">
+        <div *ngFor="let category of categoryList" class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <div class="category-grid-3 hover-up">
+            <div class="category-img flex justify-center">
+              <a [routerLink]="category.link">
+                <img width={81} height={81} [src]="category.imageUrl" alt="Moirai" />
+              </a>
+            </div>
+            <h4 class="text-heading-5 mb-5">{{category.title}}</h4>
+            <p class="text-body-text color-gray-500">{{category.detail}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section-box mt-80">
+    <div class="container mt-60">
+      <div class="row">
+        <h2 class="text-heading-1 color-gray-900">Latest products</h2>
+        <p class="text-body-lead-large color-gray-600 mt-20">
+          Don&rsquo;t miss world trending
+        </p>
+      </div>
+    </div>
+    <div class="container mt-60">
+      <div class="filters-products d-flex">
+        <div class="number-info">
+          <strong class="text-body-lead color-gray-500">
+            There are <span class="color-green-900">1853</span>
+            products in this category
+          </strong>
+        </div>
+        <div class="fitler-info">
+          <div class="icon-layout mr-10 text-body-text color-gray-500">
+            Show:
+            <div class="color-green-900 d-inline">
+              <div class="dropdown dropdown-sort">
+                <button class="btn dropdown-toggle" id="dropdownPage" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" data-bs-display="static">
+                  <span class="ml-5">50</span>
+                  <i class="fi-rr-angle-small-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownPage">
+                  <li>
+                    <a routerLink="#" class="dropdown-item active">50</a>
+                  </li>
+                  <li>
+
+                    <a routerLink="#" class="dropdown-item">100</a>
+                  </li>
+                  <li>
+                    <a routerLink="#" class="dropdown-item">150</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="icon-sort text-body-text color-gray-500">
+            Sort by:
+            <div class="color-green-900 d-inline">
+              <div class="dropdown dropdown-sort">
+                <button class="btn dropdown-toggle" id="dropdownSort" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" data-bs-display="static">
+                  <span class="ml-5">Featured</span>
+                  <i class="fi-rr-angle-small-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort">
+                  <li>
+                    <a routerLink="#" class="dropdown-item active">Featured</a>
+                  </li>
+                  <li>
+                    <a routerLink="#" class="dropdown-item">Rating</a>
+                  </li>
+                  <li>
+                    <a routerLink="#" class="dropdown-item">Low Price</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-40">
+        <div *ngFor="let item of data; let i = index"
+          class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 category-product">
+          <div class="product-item-2 hover-up">
+            <a [routerLink]="'/shop/'+item.id">
+              <div class="product-image">
+                <img width={215} height={215} class="img-fluid" [src]="'/assets/images/page/shop1/'+item.img" alt="" />
+              </div>
+            </a>
+            <div class="box-quick-view">
+              <div class="quick-view">
+                <a routerLink="#" class="like-product"></a>
+                <a routerLink="#" class="shuffle-product"></a>
+                <a routerLink="#" class="view-product"></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="text-body-small color-gray-500 font-bold">
+                {{item.brand}}
+              </span>
+              <a [routerLink]="'/shop/'+item.id">
+                <h3 class="text-body-lead color-gray-900">
+                  {{item.title}}
+                </h3>
+              </a>
+              <div class="rating mt-10">
+                <div class="box-rating">
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star.svg" alt="Moirai" />
+                  </span>
+                </div>
+                <span class="text-semibold">
+                  <span>(</span>
+                  <span>{{item.rating}}</span>
+                  <span>&nbsp;rates )</span>
+                </span>
+              </div>
+              <div class="d-flex mt-20">
+                <div class="box-prices">
+                  <span class="price-regular mr-5">
+                    ${{item.oldPrice}}
+                  </span>
+                  <span class="price-regular price-line">
+                    ${{item.newPrice}}
+                  </span>
+                </div>
+                <div class="button-add text-end">
+
+                  <a routerLink="#" class="btn btn-cart">Add</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="paginations">
+        <ul class="pager">
+          <li>
+            <a routerLink="#" class="prev-page"></a>
+          </li>
+          <li>
+            <a routerLink="#">1</a>
+          </li>
+          <li>
+            <a routerLink="#">2</a>
+          </li>
+          <li>
+            <a routerLink="#">3</a>
+          </li>
+          <li>
+            <a routerLink="#" class="page-dotted"></a>
+          </li>
+          <li>
+            <a routerLink="#" class="next-page"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section-box mt-80">
+    <div class="container mt-60">
+      <div class="row">
+        <h2 class="text-heading-1 color-gray-900">Viewed products</h2>
+        <p class="text-body-lead-large color-gray-600 mt-20">
+          Take it to your cart
+        </p>
+      </div>
+    </div>
+    <div class="container mt-60">
+      <div class="row">
+        <div *ngFor="let product of viewedProductList" class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+          <div class="product-item-1 hover-up">
+            <a [routerLink]="'/shop/'+product.id">
+              <div class="product-image">
+                <img width={121} height={150} [src]="product.img" alt="Moirai" />
+              </div>
+              <div class="product-info">
+                <h3 class="title-product">
+                  {{product.title}}
+                </h3>
+                <span class="price-regular mr-15">${{product.newPrice}}</span>
+                <span class="price-regular price-line">${{product.oldPrice}}</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <posts-component bigTitle="What's new" description="From Our blog and Event fanpage" postsStyle="posts-header-left"
+    [postsData]="postsData" />
+  <download-banner-component />
+</div>

@@ -4,6 +4,8 @@ import { RouterModule, Routes } from "@angular/router";
 import { FirstShopComponent } from "./first-shop/first-shop.component";
 import { SecondShopComponent } from "./second-shop/second-shop.component";
 import { DetailShopComponent } from "./detail-shop/detail-shop.component";
+import { PostsModule } from "../shared/components/posts/posts.module";
+import { DownloadBannerModule } from "../shared/components/download-banner/download-banner.module";
 
 const routes: Routes = [
 	{
@@ -26,8 +28,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-	imports: [CommonModule, RouterModule.forChild(routes)],
-	declarations: [],
+	imports: [
+		CommonModule,
+		PostsModule,
+		DownloadBannerModule,
+		RouterModule.forChild(routes),
+	],
+	declarations: [FirstShopComponent, SecondShopComponent],
 	exports: [RouterModule],
 })
 export class ShopRoutingModule {}
