@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { ContactComponent } from "./contact.component";
-import { ContactBoxComponent } from "../shared/components/contact-box/contact-box.component";
+import { ContactBoxModule } from "../shared/components/contact-box/contact-box.module";
 
 const routes: Routes = [
 	{
@@ -17,8 +17,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-	imports: [CommonModule, RouterModule.forChild(routes)],
-	declarations: [ContactComponent,ContactBoxComponent],
+	imports: [CommonModule, ContactBoxModule, RouterModule.forChild(routes)],
+	declarations: [ContactComponent],
 	exports: [RouterModule],
 })
 export class ContactRoutingModule {}

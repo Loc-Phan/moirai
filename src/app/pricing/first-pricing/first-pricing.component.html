@@ -1,1 +1,88 @@
-first-pricing
+<div>
+  <section class="section-box mt-70">
+    <div class="container mt-50">
+      <h3 class="text-heading-1 text-center mb-10">Choose The Best Plan <br class="d-lg-block d-none" />That’s
+        For You</h3>
+    </div>
+    <price-table-component [priceData]="pricingData"></price-table-component>
+  </section>
+  <section class="section-box mt-80">
+    <div class="container mt-60">
+      <div class="row">
+        <div class="col-lg-3 col-md-12 col-sm-12 mt-30 mb-20">
+          <h2 class="text-heading-1 color-gray-900 mb-30">Customer Lifecycle</h2>
+          <p class="text-body-excerpt color-gray-600">We understand that the relationship with our customers extends
+            beyond a single transaction, which is why we focus on nurturing and supporting them throughout the entire
+            customer lifecycle.</p>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 mt-30">
+          <div class="list-icons">
+            <div class="item-icon pl-0">
+              <div class="mb-15">
+                <img width={80} height={80} src="/assets/images/page/homepage2/icon-acquis.svg" alt="Moirai" />
+              </div>
+              <h4 class="text-heading-4">1. Acquisition</h4>
+              <p class="text-body-text color-gray-600 mt-15">Our Acquisition plan focuses on introducing new
+                customers to our fashion offerings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 mt-30">
+          <div class="list-icons">
+            <div class="item-icon pl-0">
+              <div class="mb-15">
+                <img width={80} height={80} src="/assets/images/page/homepage2/icon-active.svg" alt="Moirai" />
+              </div>
+              <h4 class="text-heading-4">2. Activation</h4>
+              <p class="text-body-text color-gray-600 mt-15">With our Activation plan, unlock additional features
+                and benefits to enhance your fashion journey.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12 mt-30">
+          <div class="list-icons">
+            <div class="item-icon pl-0">
+              <div class="mb-15">
+                <img width={80} height={80} src="/assets/images/page/homepage2/icon-retent.svg" alt="Moirai" />
+              </div>
+              <h4 class="text-heading-4">3. Retention</h4>
+              <p class="text-body-text color-gray-600 mt-15">Our Retention plan rewards loyalty and ensures an
+                ongoing delightful fashion experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <feedback-box-component [feedbackData]="fBData"></feedback-box-component>
+  <section class="section-box mt-80">
+    <div class="container mt-70">
+      <div class="row">
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+        <div class="col-lg-8 col-sm-10 col-12 text-center">
+          <h2 class="text-heading-1 color-gray-900">Frequently Asked Questions</h2>
+          <p class="text-body-lead-large color-gray-600 mt-20">We understand that you may have questions about
+            various aspects of fashion, from shipping and returns to product care and sizing. To make your shopping
+            experience as seamless as possible, we have categorized our frequently asked questions into different types.
+          </p>
+        </div>
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+      </div>
+    </div>
+  </section>
+  <section class="section-box mt-70">
+    <div class="container mt-60">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 col-12">
+          <ul class="list-icons-2 row d-flex">
+            <li *ngFor="let item of faqsInfo" class="col-lg-6 col-sm-6 col-12">
+              <h3 class="text-heading-5 mb-10">{{item.question}}</h3>
+              <p class="text-body-text color-gray-500">{{item.answer}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <news-letter-component></news-letter-component>
+</div>

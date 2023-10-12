@@ -1,0 +1,43 @@
+<section class="section-box mt-100" [ngClass]="feedbackStyle">
+  <div class="container mt-70">
+    <div class="bdrd-58 box-gray-100 pt-40 pb-20">
+      <div class="row">
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+        <div class="col-lg-8 col-sm-10 col-12 text-center">
+          <h2 class="text-heading-1 color-gray-900">
+            Customers Feedback
+          </h2>
+          <p class="text-body-lead-large color-gray-600 mt-20">
+            What are our client talk about us?
+          </p>
+        </div>
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+      </div>
+      <div class="container mt-60">
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
+          <div *ngFor="let fb of feedbackData; let i = index" class="col-lg-6 col-md-6 col-sm-12">
+            <div class="card-grid-style-2 hover-up mb-20">
+              <h5 class="text-heading-5 color-gray-900">
+                {{fb.title}}
+              </h5>
+              <p class="text-body-text color-gray-600 mt-20 text-comment">
+                {{fb.content}}
+              </p>
+              <div class="box-img-user">
+                <div class="img-user">
+                  <img width={80} height={80} [src]="'/assets/images/page/homepage2/'+fb.avatarUrl+'.png'" alt="Moirai" />
+                </div>
+                <h4 class="text-body-lead color-gray-900 mb-5">
+                  {{fb.username}}
+                </h4>
+                <p class="text-body-text-md">
+                  {{fb.job}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

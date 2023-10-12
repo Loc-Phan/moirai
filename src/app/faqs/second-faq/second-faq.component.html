@@ -1,1 +1,99 @@
-second-faq
+<div>
+  <div class="section-box"></div>
+  <div class="banner-hero banner-breadcrums">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <h1 class="text-heading-4 color-gray-900 mb-20">Join the community with more than 12,368 topics already
+            created</h1>
+          <p class="text-body-text color-gray-400">Professional support team will solve your problem.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="form-square">
+            <form class="form-inline" action="#"><input class="form-control input-with-button"
+                placeholder="Your question..." /><button class="text-heading-6 btn btn-square-green faqs-find-btn"
+                type="submit">Find now</button></form>
+            <div class="block-tags hidden-phone">
+              <a routerLink="/pricing/page-pricing-1" class="text-body-text color-gray-900">Pricing plan <span
+                  class="icon-close"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section-box mt-80">
+    <div class="container mt-70">
+      <div class="row">
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+        <div class="col-lg-8 col-sm-10 col-12 text-center">
+          <h2 class="text-heading-1 color-gray-900">Frequently Asked Questions</h2>
+          <p class="text-body-lead-large color-gray-600 mt-20">We understand that you may have questions about
+            various aspects of fashion, from shipping and returns to product care and sizing. To make your shopping
+            experience as seamless as possible, we have categorized our frequently asked questions into different
+            types.</p>
+        </div>
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+      </div>
+    </div>
+    <div class="container mt-60">
+      <div class="row">
+        <div class="col-lg-4 col-sm-4 col-12 mb-20">
+          <div class="card-grid-style-6 md-px-30 hover-up wow animate__animated animate__fadeIn"
+            data-wow-delay=".1s">
+            <div class="grid-6-img">
+              <img width={50} height={50} src="/assets/images/page/faqs/1/icon-delivery.svg" alt="Moirai" />
+            </div>
+            <h3 class="text-heading-5 mt-20">Shipping and Delivery</h3>
+            <p class="text-body-text color-gray-600 mt-20">Learn about our shipping policies, estimated delivery
+              times, and tracking your order.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-12 mb-20">
+          <div class="card-grid-style-6 md-px-30 hover-up wow animate__animated animate__fadeIn"
+            data-wow-delay=".3s">
+            <div class="grid-6-img">
+              <img width={50} height={50} src="/assets/images/page/faqs/1/icon-exchanges.svg" alt="Moirai" />
+            </div>
+            <h3 class="text-heading-5 mt-20">Returns and Exchanges</h3>
+            <p class="text-body-text color-gray-600 mt-20">Find information on our return policy, procedures for
+              exchanging items, and refund processing.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-12 mb-20">
+          <div class="card-grid-style-6 md-px-30 hover-up wow animate__animated animate__fadeIn"
+            data-wow-delay=".5s">
+            <div class="grid-6-img">
+              <img width={50} height={50} src="/assets/images/page/faqs/1/icon-size.svg" alt="Moirai" />
+            </div>
+            <h3 class="text-heading-5 mt-20">Sizing and Fit</h3>
+            <p class="text-body-text color-gray-600 mt-20">Discover how to choose the right size for your
+              garments, including measurements and size charts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-box mt-80 mb-30"></div>
+  <div class="container mt-60">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-12">
+        <ul class="list-icons-2 row d-flex">
+          <li *ngFor="let item of faqsInfo" class="col-lg-6 col-sm-6 col-12">
+            <h3 class="text-heading-5 mb-10">{{item.question}}</h3>
+            <p class="text-body-text color-gray-500">{{item.answer}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <section class="section-box mt-80">
+    <div class="container mt-60 text-center">
+      <h3 class="text-heading-1 mb-10">Customers <br class="visible-tablet" /> Feedback</h3>
+      <p class="text-body-lead-large color-gray-600 mt-20">What are customers talk about us?</p>
+    </div>
+    <div class="container mt-60 mobile-feedback">
+      <testimonial-slider-component></testimonial-slider-component>
+    </div>
+  </section>
+</div>

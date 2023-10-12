@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-	selector: "contact-box-app",
+	selector: "contact-box-component",
 	templateUrl: "./contact-box.component.html",
 })
 export class ContactBoxComponent {
