@@ -1,0 +1,49 @@
+<div class="section-box mt-80" [ngClass]="postsStyle">
+  <div class="container mt-70">
+    <div class="row">
+      <div class="col-12 text-center posts-title">
+        <h2 class="text-heading-1 color-gray-900 mb-10">{{bigTitle}}</h2>
+        <p class="text-body-lead-large color-gray-600 mt-20">{{description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-60">
+    <div class="row">
+      <div *ngFor="let post of mainPosts; let i = index" class="col-lg-4 col-sm-6 pr-30 mb-30" key={i}>
+        <div class="card-grid-style-4">
+          <div class="grid-4-img mb-20" [ngClass]="post.bgColor">
+            <a [routerLink]="post.link">
+              <img width={396} height={465} [src]="post.imageUrl" alt="Moirai" />
+            </a>
+          </div>
+          <a [routerLink]="post.link" class="text-heading-5 color-gray-900">{{post.title}}</a>
+          <p class="text-body-text color-gray-500 mt-10">{{post.decription}}</p>
+          <div class="blog-img-user">
+            <div class="img-user img-user-round">
+              <img width={56} height={56} [src]="post.authorAvatar" alt="Moirai" />
+            </div>
+            <h4 class="text-heading-6 color-gray-900">{{post.author}}</h4>
+            <p class="text-body-small color-gray-500">{{post.date}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 pr-30 mb-30">
+        <div *ngFor="let post of subPosts; let i = index" class="card-list-style-1">
+          <a [routerLink]="post.link" class="text-heading-5 color-gray-900">{{post.title}}</a>
+          <div class="blog-img-user">
+            <div class="img-user img-user-round">
+              <img width={41} height={41} [src]="post.authorAvatar" alt="Moirai" />
+            </div>
+            <h4 class="text-body-lead color-gray-500">{{post.author}}</h4>
+            <p class="text-body-small color-gray-500">{{post.date}}</p>
+          </div>
+          <div class="style-1-img" [ngClass]="post.bgColor">
+            <a [routerLink]="post.link">
+              <img width={110} height={110} [src]="post.imageUrl" alt="Moirai" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

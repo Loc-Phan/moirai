@@ -1,1 +1,22 @@
-first-blog
+<div>
+  <section class="section-box bg-header">
+    <div class="container mt-70">
+      <div class="row">
+        <div class="col-lg-1 col-sm-1 col-12"></div>
+        <div class="col-lg-10 col-sm-10 col-12 text-center">
+          <h2 class="text-heading-1 color-gray-900 mb-10">Our Blog</h2>
+          <p class="text-heading-6 color-gray-600 mt-20">Welcome to our fashion shop blog, a virtual haven for style
+            enthusiasts <br class="d-lg-block d-none" /> and trendsetters alike. Here, we dive into the world of
+            fashion retail, <br class="d-lg-block d-none" /> bringing you the latest updates, tips, and inspiration
+            to enhance your <br class="d-lg-block d-none" /> shopping experience.</p>
+        </div>
+        <div class="col-lg-1 col-sm-1 col-12"></div>
+      </div>
+    </div>
+    <div class="container mt-60">
+      <blog-slider-component></blog-slider-component>
+    </div>
+  </section>
+  <blogs-component [blogsData]="blogsData" />
+  <news-letter-component newsletterStyle="style-1" />
+</div>

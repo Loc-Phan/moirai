@@ -4,4 +4,7 @@ import { Component } from "@angular/core";
 	selector: "sign-up-app",
 	templateUrl: "./sign-up.component.html",
 })
-export class SignUpComponent {}
+export class SignUpComponent {
+  showPassword = false;
+	reshowPassword = false;
+}

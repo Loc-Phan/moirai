@@ -1,0 +1,42 @@
+<div class="slider-news">
+  <div class="swiper-container swiper-group-1">
+    <swiper [config]="swiperConfig" class="swiper-wrapper pb-70 pt-5">
+      <ng-template *ngFor="let item of data; let i = index" swiperSlide>
+        <div class="swiper-slide active">
+          <div class="block-news grid-4-img">
+            <div class="item-news">
+              <div class="row">
+                <div class="col-xl-6 col-lg-12">
+                  <div class="img-news">
+                    <a routerLink="/blog/blog-single">
+                      <img width={677} height={492} src="/assets/images/page/blog/1/img-1.png" alt="Moirai" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-12">
+                  <div class="right-news card-grid-style-4 mb-0"><span class="tag-dot">Marketing Event</span>
+                    <a routerLink="/blog/blog-single" class="text-heading-4">We can blend colors multiple ways, the
+                      most common
+                    </a>
+                    <p class="text-body-text color-gray-500 text-desc-fix-h">Lorem ipsum dolor sit amet consectetur
+                      adipiscing elit interdum ullamcorper sed pharetra senectus donec nunc. Consequat semper viverra
+                      nam libero justo laoreet facilisis magna etiam.</p>
+                    <div class="blog-img-user">
+                      <div class="img-user img-user-round">
+                        <img width={56} height={56} src="/assets/images/page/blog/2/user-1.png" alt="Moirai" />
+                      </div>
+                      <h4 class="text-heading-6 color-gray-900">Jenny Wilson</h4>
+                      <p class="text-body-small color-gray-500">August 25, 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+  <div class="swiper-button-next swiper-button-next-5"></div>
+  <div class="swiper-button-prev swiper-button-prev-5"></div>
+</div>
