@@ -1,0 +1,46 @@
+<div class="container mt-20">
+  <div *ngIf="!priceData[0].pricing" class="text-center block-bill-2 mt-10">
+    <span class="text-lg text-billed">Billed Monthly</span>
+    <label class="switch ml-20 mr-20" [ngClass]="priceItemStyle">
+      <input id="cb_billed_type" type="checkbox" name="billed_type" onClick={toggleTrueFalse} />
+      <span class="slider round"></span></label>
+    <span class="text-lg text-billed">Bill Annually</span>
+  </div>
+
+  <div class="block-pricing block-pricing-2 mt-70" [ngClass]="priceItemStyle">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12">
+        <div class="row">
+          <div *ngFor="let opt of priceData; let i = index"
+            class="col-xl-3 col-lg-6 col-md-6 wow animate__animated animate__fadeIn" data-wow-delay=".1s" key={i}
+            (click)="isActive = i">
+            <div class="box-pricing-item hover-up" [ngClass]="isActive===i ? 'active' : ''">
+              <div class=" box-info-price">
+                <span *ngIf="opt.pricing" class="text-heading-3 for-month display-month">${{opt.pricing}}</span>
+                <div *ngIf="!opt.pricing">
+                  <span class="text-heading-3 for-month display-month">${{isToggled ? opt.pricingYear :
+                    opt.pricingMonth}}</span>
+                  <span class="text-month for-month text-body-small color-gray-400 display-month">/{{isToggled ?
+                    "Year" : "Month"}}</span>
+                </div>
+              </div>
+              <div class="line-bd-bottom">
+                <h4 class="text-heading-5 mb-15">
+                  {{opt.title}}
+                </h4>
+                <p class="text-body-small color-gray-400">
+                  {{opt.decription}}
+                </p>
+              </div>
+              <ul class="list-package-feature">
+                <li *ngFor="let item of opt.features">{{item}}</li>
+              </ul>
+              <a routerLink="#" class="btn btn-black text-body-lead icon-arrow-right-white">Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

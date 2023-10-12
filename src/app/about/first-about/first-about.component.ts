@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { BlogData } from "src/app/shared/blogs/blogs.component";
+import { BlogData } from "src/app/shared/components/blogs/blogs.component";
 
 @Component({
 	selector: "first-about-app",

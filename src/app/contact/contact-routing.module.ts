@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { ContactComponent } from "./contact.component";
-import { ContactBoxComponent } from "../shared/contact-box/contact-box.component";
+import { ContactBoxComponent } from "../shared/components/contact-box/contact-box.component";
 
 const routes: Routes = [
 	{

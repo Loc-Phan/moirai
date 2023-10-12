@@ -1,0 +1,39 @@
+<section class="section-box overflow-visible mt-100 mb-50">
+  <div class="container mt-70">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="box-newsletter position-relative" [ngClass]="styles.bgColor">
+          <div class="row">
+            <div class="col-lg-5 col-md-7">
+              <span class="text-body-capitalized text-uppercase" [ngClass]="styles.tag">
+                newsletter
+              </span>
+              <h4 class="text-heading-2 mb-10 mt-10" [ngClass]="styles.title">
+                Contact for selling overview
+              </h4>
+              <p class="text-body-text" [ngClass]="styles.content">
+                By clicking the button, you are agreeing with our
+                <a routerLink="/page-terms" class={styles.terms}>Term &amp; Conditions</a>
+              </p>
+
+              <div class="box-form-newsletter mt-30">
+                <form class="form-newsletter">
+                  <input class="input-newsletter" placeholder="Enter you mail .." />
+                  <button class="btn" [ngClass]="styles.button"></button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-5 mt-30 mt-lg-0 mt-md-30 mt-sm-30 position-relative text-end">
+              <div class="block-chart shape-1">
+                <img width={255} height={193} [src]="styles.chartImgUrl" alt="Moirai" />
+              </div>
+              <div class="img-responsive img-newsletter">
+                <img width={332} height={403} [src]="'/assets/images/template/img-newsletter-1.png'" alt="Moirai" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

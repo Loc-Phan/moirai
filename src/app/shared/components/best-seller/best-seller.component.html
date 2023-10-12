@@ -55,9 +55,11 @@
         <div *ngIf="bestSellerData.images.length === 2">
           <div *ngIf="smallImgTop; else largeImgTop">
             <div class="inner-image block-image-main bdrd-16">
-              <img width="{576}" height="{655}" src="{BestSellerData.images[0]}" alt="Moirai" />
+              <div class="relative">
+                <img width="576" height="655" class="absolute" [src]="bestSellerData.images[0]" alt="Moirai" />
+              </div>
               <div class="block-image-top bdrd-16 flex">
-                <img width="{313}" height="{329}" src="{BestSellerData.images[1]}" alt="Moirai" />
+                <img width="313" height="329" class="absolute top-0 left-0" [src]="bestSellerData.images[1]" alt="Moirai" />
               </div>
             </div>
           </div>

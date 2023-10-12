@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { BlogData } from "src/app/shared/blogs/blogs.component";
-import { FeedbackProp } from "src/app/shared/feedback/feedback.component";
+import { BlogData } from "src/app/shared/components/blogs/blogs.component";
+import { FeedbackProp } from "src/app/shared/components/feedback/feedback.component";
 
 @Component({
 	selector: "third-about-app",

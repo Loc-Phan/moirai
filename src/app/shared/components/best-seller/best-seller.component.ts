@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 interface ContentData {
 	id: number;
@@ -6,7 +6,7 @@ interface ContentData {
 	text?: string;
 }
 
-interface BestSellerData {
+export interface BestSellerData {
 	tag?: string;
 	title: string;
 	description: string;
@@ -18,7 +18,7 @@ interface BestSellerData {
 	selector: "best-seller-component",
 	templateUrl: "best-seller.component.html",
 })
-export class BestsellerComponent {
+export class BestsellerComponent implements OnInit {
 	@Input() imagesRight = false;
 	@Input() smallImgTop = false;
 	@Input() bestSellerStyle = "";
@@ -29,7 +29,7 @@ export class BestsellerComponent {
 		letterIcon: "icon-leaf",
 		dashLine: "line-bd-green",
 	};
-	constructor() {
+	ngOnInit() {
 		switch (this.bestSellerStyle) {
 			case "style-1":
 				this.style = {

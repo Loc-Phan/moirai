@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { AccordionData } from "src/app/shared/accordion/accordion.compoent";
-import { BlogData } from "src/app/shared/blogs/blogs.component";
+import { AccordionData } from "src/app/shared/components/accordion/accordion.compoent";
+import { BlogData } from "src/app/shared/components/blogs/blogs.component";
 
 @Component({
 	selector: "second-about-app",
