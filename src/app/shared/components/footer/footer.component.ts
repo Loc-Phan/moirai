@@ -12,11 +12,11 @@ export class FooterComponent {
 			children: [
 				{
 					content: "Mission & Vision",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Our Product",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Our Story",
@@ -24,11 +24,11 @@ export class FooterComponent {
 				},
 				{
 					content: "Our Commitment",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Advertising",
-					url: "/#",
+					url: "/",
 				},
 			],
 		},
@@ -45,7 +45,7 @@ export class FooterComponent {
 				},
 				{
 					content: "Office Center",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "News & Events",
@@ -62,15 +62,15 @@ export class FooterComponent {
 				},
 				{
 					content: "Editor Help",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Community",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Live Chatting",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Contact Us",
@@ -78,7 +78,7 @@ export class FooterComponent {
 				},
 				{
 					content: "Support Center",
-					url: "/#",
+					url: "/",
 				},
 			],
 		},
@@ -87,11 +87,11 @@ export class FooterComponent {
 			children: [
 				{
 					content: "Request an offer",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "How it works",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Pricing",
@@ -99,11 +99,11 @@ export class FooterComponent {
 				},
 				{
 					content: "Reviews",
-					url: "/#",
+					url: "/",
 				},
 				{
 					content: "Stories",
-					url: "/#",
+					url: "/",
 				},
 			],
 		},

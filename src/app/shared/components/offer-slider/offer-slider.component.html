@@ -1,0 +1,19 @@
+<div class="box-swiper">
+  <div class="swiper-container swiper-group-4">
+    <swiper [config]="swiperConfig" class="swiper-wrapper pb-70 pt-5">
+      <ng-template *ngFor="let item of data; let i = index" swiperSlide>
+        <div class="swiper-slide">
+          <div class="card-grid-style-2 hover-up">
+            <div class="grid-2-img">
+              <img width={50} height={50} [src]="'/assets/images/page/homepage1/'+item.img" alt="Moirai" />
+            </div>
+            <h3 class="text-heading-5 mt-20">{{item.title}}</h3>
+            <p class="text-body-text color-gray-600 mt-20">
+              {{item.text}}
+            </p>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</div>

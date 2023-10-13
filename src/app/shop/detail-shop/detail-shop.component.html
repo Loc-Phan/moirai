@@ -1,1 +1,419 @@
-detail-shop
+<div>
+  <section class="section-box">
+    <div class="banner-hero nav-breadcrums bg-gray-100">
+      <div class="container">
+        <div class="breadcrumb">
+          <ul>
+            <li class="home">
+              <a routerLink="index.html">Home</a>
+            </li>
+            <li>
+              <a routerLink="page-shop-grid-1.html">Shop</a>
+            </li>
+            <li>
+              <a routerLink="page-shop-grid-2.html">Women</a>
+            </li>
+            <li>
+              <a routerLink="/">Pajama</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section-box mt-70"></div>
+  <section *ngIf="singleStore" class="section-box">
+    <div class="container mt-60">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 col-sm-12">
+          <thumb-slider-component></thumb-slider-component>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="product-info">
+            <div class="d-flex">
+              <div class="box-category-product">
+                <span class="tag-category">
+                  {{singleStore.brand}}
+                </span>
+              </div>
+              <div class="box-rate-product">
+                <div class="box-rating">
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star-active.svg" alt="Moirai" />
+                  </span>
+                  <span>
+                    <img width={12} height={12} src="/assets/images/page/homepage5/star.svg" alt="Moirai" />
+                  </span>
+                </div>
+                <span class="text-semibold">
+                  <span>(</span>
+                  <span>{{singleStore.rating}}</span>
+                  <span>&nbsp;rates )</span>
+                </span>
+              </div>
+            </div>
+            <h1 class="text-heading-4 mt-30">
+              Barocco Silk Pajama Slip
+            </h1>
+            <div class="box-price">
+              <span class="price">$318.00</span>
+              <span class="price-old">$420.00</span>
+              <span class="text-stock">(In stock)</span>
+            </div>
+            <div class="text-body-text color-gray-500 single-product">
+              <ul>
+                In stock
+                <li>Barocco print</li>
+                <li>Sleeveless</li>
+                <li>Shoulder straps</li>
+                <li>Outer composition: 100% Silk</li>
+              </ul>
+            </div>
+            <div class="box-countdown mt-40">
+              <div class="box-processbar">
+                <div class="text-hurry">
+                  Hurry up!
+                  <br />
+                  Sales ends soon!
+                </div>
+                <div class="process-bar-line">
+                  <div class="process-bar-inner"></div>
+                </div>
+                <span class="text-number-sold">63/158 sold</span>
+              </div>
+              <div></div>
+              <div class="box-count">
+                <div class="deals-countdown pl-5" data-countdown="2022/05/25 00:00:00"></div>
+              </div>
+            </div>
+            <div class="detail-extralink mb-30">
+              <div class="detail-qty border radius">
+                <a class="qty-down" (click)="quantity = quantity + 1">
+                  <i class="fi-rs-angle-small-down"></i>
+                </a>
+                <input class="qty-val" name="quantity" [defaultValue]="quantity" min={1} />
+                <a routerLink="/" class="qty-up">
+                  <i class="fi-rs-angle-small-up"></i>
+                </a>
+              </div>
+              <div class="product-extra-link2">
+                <button class="button button-add-to-cart" type="submit">
+                  <img width={17} height={16} src="/assets/images/page/single-product/cart.svg" alt="Moirai" />
+                  Add to cart
+                </button>
+                <a routerLink="/" class="action-btn hover-up" aria-label="Add To Wishlist">
+                  <div class="flex justify-center items-center w-full h-full">
+                    <img class="w-[17px] h-[17px]" src="/assets/images/page/single-product/heart.svg" alt="Moirai" />
+                  </div>
+                </a>
+                <a routerLink="/" class="action-btn hover-up" aria-label="Compare">
+                  <div class="flex justify-center items-center w-full h-full"><img width={17} height={17}
+                      src="/assets/images/page/single-product/align.svg" alt="Moirai" />
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="box-categories-link">
+              <div class="item-cat">
+                <span class="text-body-text color-gray-900">
+                  Vendor:
+                </span>
+                <a routerLink="/" class="text-body-text color-gray-500 ml-5">
+                  MoiraiMart
+                </a>
+              </div>
+              <div class="item-cat">
+                <span class="text-body-text color-gray-900">
+                  SKU:
+                </span>
+                <a routerLink="/" class="text-body-text color-gray-500 ml-5">
+                  ABJK767C878
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-description">
+        <div class="container mt-60">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="nav mt-50" role="tablist">
+                <li (click)="handleOnClick(1)">
+                  <a [ngClass]="activeIndex===1 ? 'btn btn-default btn-tab choice' : 'btn btn-default btn-tab'">
+                    Description
+                  </a>
+                </li>
+                <li (click)="handleOnClick(2)">
+                  <a [ngClass]="activeIndex===2 ? 'btn btn-default btn-tab choice' : 'btn btn-default btn-tab'">
+                    Additional info
+                  </a>
+                </li>
+                <li (click)="handleOnClick(4)">
+                  <a [ngClass]="activeIndex===4 ? 'btn btn-default btn-tab choice' : 'btn btn-default btn-tab'">
+                    Reviews (3)
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content mt-30">
+                <div [ngClass]="activeIndex===1 ? 'tab-pane fade active show' : 'tab-pane fade'">
+                  <div class="text-body-text color-gray-500">
+                    Crafted from silk twill, this pajama slip dress
+                    features an all-over Barocco print.
+                    <br /> Product Details
+                    <ul>
+                      <li>Barocco print</li>
+                      <li>Sleeveless</li>
+                      <li>Shoulder straps</li>
+                      <li>Outer composition: 100% Silk</li>
+                      <li>Do not wash</li>
+                      <li>Do not bleach</li>
+                      <li>Do not tumble dry</li>
+                      <li>Cool iron</li>
+                      <li>Delicate dry clean</li>
+                    </ul>
+                  </div>
+                </div>
+                <div [ngClass]="activeIndex===2 ? 'tab-pane fade active show' : 'tab-pane fade'">
+                  <table class="table">
+                    <tbody>
+                      <tr class="stand-up">
+                        <th>Height</th>
+                        <td>
+                          <p>149 - 156 cm</p>
+                        </td>
+                      </tr>
+                      <tr class="folded-wo-wheels">
+                        <th>Bust</th>
+                        <td>
+                          <p>74 - 80 cm</p>
+                        </td>
+                      </tr>
+                      <tr class="folded-w-wheels">
+                        <th>Weight</th>
+                        <td>
+                          <p>57 - 63 cm</p>
+                        </td>
+                      </tr>
+                      <tr class="door-pass-through">
+                        <th>Hip</th>
+                        <td>
+                          <p>82 - 88 cm</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div [ngClass]="activeIndex===3 ? 'tab-pane fade active show' : 'tab-pane fade'">
+                  <div class="vendor-logo d-flex mb-30">
+                    <img width={64} height={43} src="/assets/images/page/single-product/vendor-18.svg" alt="image" />
+                    <div class="vendor-name ml-15">
+                      <h6>
+                        <a routerLink="vendor-details-2.html">Noodles Co.</a>
+                      </h6>
+                      <div class="product-rate-cover text-end">
+                        <div class="product-rate d-inline-block">
+                          <div class="product-rating w-[90%]"></div>
+                        </div>
+                        <span class="font-small ml-5 text-muted">
+                          (32 reviews)
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="contact-infor mb-50">
+                    <li>
+                      <img width={16} height={16} src="/assets/images/page/single-product/icon-location.svg"
+                        alt="image" />
+                      <strong>Address: </strong>
+                      <span>
+                        5171 W Campbell Ave undefined Kent, Utah 53127
+                        United States
+                      </span>
+                    </li>
+                    <li>
+                      <img width={16} height={16} src="/assets/images/page/single-product/icon-contact.svg"
+                        alt="image" />
+                      <strong>Contact Seller:</strong>
+                      <span>(+91) - 540-025-553</span>
+                    </li>
+                  </ul>
+                  <div class="d-flex mb-55">
+                    <div class="mr-30">
+                      <p class="text-brand font-xs">Rating</p>
+                      <h4 class="mb-0">92%</h4>
+                    </div>
+                    <div class="mr-30">
+                      <p class="text-brand font-xs">
+                        Ship on time
+                      </p>
+                      <h4 class="mb-0">100%</h4>
+                    </div>
+                    <div>
+                      <p class="text-brand font-xs">
+                        Chat response
+                      </p>
+                      <h4 class="mb-0">89%</h4>
+                    </div>
+                  </div>
+                  <p class="text-body-text color-gray-500">
+                    Noodles &amp; Company is an American fast-casual
+                    restaurant that offers international and American
+                    noodle dishes and pasta in addition to soups and
+                    salads. Noodles &amp; Company was founded in 1995
+                    by Aaron Kennedy and is headquartered in
+                    Broomfield, Colorado. The company went public in
+                    2013 and recorded a $457 million revenue in
+                    2017.In late 2018, there were 460 Noodles &amp;
+                    Company locations across 29 states and Washington,
+                    D.C.
+                  </p>
+                </div>
+                <div [ngClass]="activeIndex===4 ? 'tab-pane fade active show' : 'tab-pane fade'">
+                  <div class="comments-area">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h4 class="mb-30 title-question">
+                          Customer questions &amp; answers
+                        </h4>
+                        <div class="comment-list">
+                          <div *ngFor="let comment of userComments"
+                            class="single-comment justify-content-between d-flex mb-30">
+                            <div class="user justify-content-between d-flex">
+                              <div class="thumb text-center">
+                                <img width={80} height={80} [src]="comment.userImage" alt="image" />
+                                <a [routerLink]="comment.link" class="font-heading text-brand">
+                                  {{comment.userName}}
+                                </a>
+                              </div>
+                              <div class="desc">
+                                <div class="d-flex justify-content-between mb-10">
+                                  <div class="d-flex align-items-center">
+                                    <span class="font-xs text-muted">
+                                      {{comment.date}}
+                                    </span>
+                                  </div>
+                                  <div class="product-rate d-inline-block">
+                                    <div class="product-rating w-full"></div>
+                                  </div>
+                                </div>
+                                <p class="mb-10 text-body-text color-gray-500">
+                                  {{comment.content}}
+                                  <a routerLink="/" class="reply"> Reply</a>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <h4 class="mb-30 title-question">
+                          Customer reviews
+                        </h4>
+                        <div class="d-flex mb-30">
+                          <div class="product-rate d-inline-block mr-15">
+                            <div class="product-rating w-[90%]"></div>
+                          </div>
+                          <h6>4.8 out of 5</h6>
+                        </div>
+                        <div class="progress">
+                          <span>5 star</span>
+                          <div class="progress-bar w-1/2" role="progressbar" aria-valuenow={50} aria-valuemin={0}
+                            aria-valuemax={100}>
+                            50%
+                          </div>
+                        </div>
+                        <div class="progress">
+                          <span>4 star</span>
+                          <div class="progress-bar w-1/4" role="progressbar" aria-valuenow={25} aria-valuemin={0}
+                            aria-valuemax={100}>
+                            25%
+                          </div>
+                        </div>
+                        <div class="progress">
+                          <span>3 star</span>
+                          <div class="progress-bar w-[45%]" role="progressbar" aria-valuenow={45} aria-valuemin={0}
+                            aria-valuemax={100}>
+                            45%
+                          </div>
+                        </div>
+                        <div class="progress">
+                          <span>2 star</span>
+                          <div class="progress-bar w-[65%]" role="progressbar" aria-valuenow={65} aria-valuemin={0}
+                            aria-valuemax={100}>
+                            65%
+                          </div>
+                        </div>
+                        <div class="progress mb-30">
+                          <span>1 star</span>
+                          <div class="progress-bar w-[65%]" role="progressbar" aria-valuenow={85} aria-valuemin={0}
+                            aria-valuemax={100}>
+                            85%
+                          </div>
+                        </div>
+                        <a routerLink="/" class="font-xs text-muted">
+                          How are ratings calculated?
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-box mt-70">
+    <div class="container mt-60">
+      <h2 class="text-heading-1 color-gray-900">You may also like</h2>
+      <p class="text-body-lead-large color-gray-600 mt-20">
+        Take it to your cart
+      </p>
+    </div>
+    <div class="container mt-60">
+      <div class="row">
+        <div *ngFor="let product of viewedProducts" class="col-xl-4 col-lg-6 col-md-12 col-sm-12" key={product.id}>
+          <div class="product-item-1 hover-up">
+            <a [routerLink]="'/shop/'+product.id">
+              <div class="product-image">
+                <img width={121} height={150} [src]="product.img" alt="Moirai" />
+              </div>
+              <div class="product-info">
+                <h3 class="title-product">
+                  {{product.title}}
+                </h3>
+                <span class="price-regular mr-15">${{product.newPrice}}</span>
+                <span class="price-regular price-line">${{product.oldPrice}}</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-box mt-80">
+    <div class="container mt-60">
+      <div class="banner-ads">
+        <div class="box-banner-ads">
+          <h3 class="text-head-ads mb-15">
+          </h3>
+          <p class="desc-ads">
+            <br class="d-lg-block d-none" />
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <download-banner-component></download-banner-component>
+</div>

@@ -1,2 +1,158 @@
-home
-<div></div>
+<div>
+  <section class="section-box">
+    <div class="banner-hero banner-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="text-display-2">
+              Unveiling the
+              <br />
+              <span class="color-pink-primary">
+                lastest fashion
+              </span>
+              <br />
+              trend in global
+            </h1>
+            <p class="text-body-lead-large color-gray-500 mt-40 pr-40">
+              The lastest trend is waiting for you
+            </p>
+            <div class="mt-40">
+              <a routerLink="/service/page-service-1" class="btn btn-black icon-arrow-right-white">
+                Get Started
+              </a>
+              <a routerLink="/about/page-about-1" class="btn btn-link icon-arrow-right color-gray-900 text-heading-6">
+                Learn More
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="banner-imgs">
+              <div class="video-block shape-1">
+                <a class="popup-youtube btn-play-video"></a>
+                <span class="text-heading-4">
+                  Watch intro video
+                </span>
+              </div>
+              <div class="shape-2">
+                <img width={526} height={596} alt="Moirai" src="/assets/images/page/homepage1/banner-img.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <logo-slider-component></logo-slider-component>
+  <section class="section-box mt-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+        <div class="col-lg-8 col-sm-10 col-12 text-center">
+          <h2 class="text-heading-1 color-gray-900">NEW PRODUCT</h2>
+          <p class="text-body-lead-large color-gray-600 mt-20">
+            We’re unique no matter how you put it.
+            <br />
+            Feel trendy. Feel authentic.
+          </p>
+        </div>
+        <div class="col-lg-2 col-sm-1 col-12"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="text-center mt-60">
+        <ul class="nav" role="tablist">
+          <li *ngFor="let tag of trailerDatas.tag" (click)="activeIndex = tag.id">
+            <a [routerLink]="tag.linkTag" [ngClass]="activeIndex===tag.id ? 'btn btn-default btn-bd-green-hover btn-select active'
+              : 'btn btn-default btn-bd-green-hover btn-select'">
+              {{tag.title}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="tab-content">
+        <div *ngFor="let content of trailerDatas.content"
+          [ngClass]="activeIndex===content.id ? 'tab-pane fade  active show' : 'tab-pane fade'">
+          <div class="panel-box mt-50" [ngClass]="content.bgColor">
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
+                <div class="box-optimized">
+                  <h3 class="text-heading-2">{{content.title}}</h3>
+                  <p class="text-body-excerpt mt-30">
+                    {{content.description}}
+                  </p>
+                  <div class="mt-40">
+                    <a [routerLink]="content.link" class="btn btn-default btn-white icon-arrow-right">
+                      Learn more
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="block-video icon-pattern">
+                  <a class="popup-youtube btn-play-video"></a>
+                  <img width={800} height={635} [src]="content.thumbUrl" alt="Moirai" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <about-us-component bigTitle="About Us" decription="We facilitate the creation of strategy and design"
+    [aboutUsData]="aboutData"></about-us-component>
+  <best-seller-component [bestSellerData]="bestSellerDatas" bestSellerStyle="style-3" />
+  <section class="section-box mt-100">
+    <div class="container mt-70">
+      <div class="bg-2 bdrd-58 pattern-white pb-60">
+        <div class="row">
+          <div class="col-lg-2 col-sm-1 col-12"></div>
+          <div class="col-lg-8 col-sm-10 col-12 text-center mt-70">
+            <h2 class="text-heading-1 color-gray-900">
+              What makes us outstanding
+            </h2>
+            <p class="text-body-lead-large color-gray-600 mt-20">
+              At our clothing shop, we strive to stand out from the
+              crowd by offering a unique and exceptional shopping
+              experience. Here are a few factors that set us apart.
+            </p>
+          </div>
+          <div class="col-lg-2 col-sm-1 col-12"></div>
+        </div>
+        <div class="container mt-60">
+          <offer-slider-component></offer-slider-component>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-box mt-100">
+    <div class="container mt-70">
+      <div class="row">
+        <div class="col-lg-9 col-sm-8">
+          <h3 class="text-heading-1 mb-10">Customers Feedback</h3>
+          <p class="text-body-lead-large color-gray-600">
+            What are our client talk about us?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-60 mobile-feedback">
+      <testimonial-slider-component></testimonial-slider-component>
+    </div>
+  </section>
+  <blogs-component [blogsData]="blogsData"></blogs-component>
+  <section class="section-box section-blue mt-110">
+    <div class="container mt-60">
+      <h3 class="text-heading-1 text-center mb-10 text-shadow-25">
+        Choose The Best Plan <br class="d-lg-block d-none" />That’s For You
+      </h3>
+    </div>
+    <price-table-component [priceData]="pricingData"></price-table-component>
+  </section>
+  <news-letter-component></news-letter-component>
+  <!-- <ModalVideo channel="youtube" youtube={{ autoplay: 1, mute: 1, }} isOpen={isOpen} videoId="A450hyqGkmk" onClose={()=>
+    setOpen(false)}
+    /> -->
+</div>

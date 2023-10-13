@@ -30,19 +30,10 @@
         <div class="header-nav">
           <nav class="nav-main-menu d-none d-xl-block">
             <ul class="main-menu">
-              <li *ngFor="let header of headers" [class]="header.children && 'has-children cursor-pointer'">
+              <li *ngFor="let header of headers">
                 <a *ngIf="header.url" [routerLink]="header.url">{{
                   header.content
                   }}</a>
-                <a *ngIf="header.children">{{ header.content }}</a>
-                <ul class="sub-menu" [ngClass]="header.twoCol ? 'two-col' : ''" *ngIf="header.children">
-                  <li *ngFor="let homepage of header.children">
-                    <a [routerLink]="homepage.url">
-                      <i [class]="homepage.icon"></i>{{ homepage.content }}
-                    </a>
-                  </li>
-                  <li className="hr"></li>
-                </ul>
               </li>
             </ul>
           </nav>

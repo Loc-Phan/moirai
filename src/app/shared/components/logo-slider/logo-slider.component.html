@@ -1,0 +1,14 @@
+<div class="section-box overflow-visible mt-80">
+  <div class="container">
+    <h2 *ngIf="title" class="text-heading-2 text-center color-gray-900 mb-60">
+      {{title}}
+    </h2>
+    <div class="row justify-content-md-center">
+      <div *ngFor="let item of data" class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+        <a routerLink="/" class="item-logo box-hover-shadow hover-up">
+          <img width={166} height={166} alt="Moirai" class="w-100" [src]="item" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

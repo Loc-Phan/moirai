@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-lg-4 col-md-4 slider-nav-thumbnails hidden-phone">
+    <swiper [config]="swiperConfig" class="flex flex-col">
+      <ng-template swiperSlide>
+        <div>
+          <img src="/assets/images/page/single-product/img-sp5.jpg"
+            alt="product image" class="border-radius-15" />
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div>
+          <img src="/assets/images/page/single-product/img-sp-6.jpg"
+            alt="product image" class="border-radius-15" />
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div>
+          <img src="/assets/images/page/single-product/img-sp5.jpg"
+            alt="product image" class="border-radius-15" />
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+  <div class="col-lg-8 col-md-8 col-sm-12">
+    <div class="product-image-slider relative">
+      <span class="icon-plus"></span>
+      <img width={700} height={700} src="/assets/images/page/single-product/img-sp6.jpg" alt="Moirai" />
+    </div>
+  </div>
+  <div class="col-sm-12 visible-phone">
+    <div class="box-swiper">
+      <div class="swiper-container swiper-group-4">
+        <swiper [config]="secondSwiperConfig" class="swiper-wrapper pb-10 pt-10">
+          <ng-template swiperSlide>
+            <div class="bdrd-16 d-flex w-full">
+              <img width={100} height={100} src="/assets/images/page/single-product/img-sp5.jpg" alt="product image"
+                class="border-radius-15" />
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="bdrd-16 d-flex w-full">
+              <img width={100} height={100} src="/assets/images/page/single-product/img-sp-6.jpg" alt="product image"
+                class="border-radius-15" />
+            </div>
+          </ng-template>
+          <ng-template swiperSlide>
+            <div class="bdrd-16 d-flex w-full">
+              <img width={100} height={100} src="/assets/images/page/single-product/img-sp5.jpg" alt="product image"
+                class="border-radius-15" />
+            </div>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</div>
