@@ -1,5 +1,5 @@
 <div class="accordion" id="accordionFAQ">
-  <div *ngFor="let item of accordionData; let i = index" class="accordion-item" key="{i}">
+  <div *ngFor="let item of accordionData; let i = index" class="accordion-item">
     <h2 class="accordion-header" (click)="handleToggle(i)">
       <button [class]="
 					isActive === i

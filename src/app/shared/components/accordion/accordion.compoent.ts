@@ -14,5 +14,11 @@ export class AccordionComponent {
 	@Input() accordionData: AccordionData[] = [];
 	accordionStyle = "";
   isActive: number | undefined = undefined;
-	handleToggle(i:number) {}
+  handleToggle(i: number) {
+    if (this.isActive === i) {
+			this.isActive = undefined;
+		} else {
+			this.isActive = i;
+		}
+  }
 }
