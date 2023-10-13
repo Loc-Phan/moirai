@@ -2,15 +2,16 @@ import { Component, HostListener } from "@angular/core";
 
 @Component({
 	selector: "header-app",
-	templateUrl: "./header.component.html",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
 	headerStyle = "normal-logo";
 	scroll: boolean = false;
+	openClass: string = "";
 	headers = [
 		{
 			content: "Home",
-			twoCol: true,
 			url: "/",
 		},
 		{
@@ -49,4 +50,14 @@ export class HeaderComponent {
 			this.scroll = scrollCheck;
 		}
 	}
+	handleOpen = () => {
+		document.body.classList.add("mobile-menu-active");
+		this.openClass = "sidebar-visible";
+	};
+  handleRemove() {
+    if (this.openClass === "sidebar-visible") {
+			this.openClass = "";
+			document.body.classList.remove("mobile-menu-active");
+		}
+  }
 }

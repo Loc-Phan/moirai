@@ -1,3 +1,4 @@
+<div [ngClass]="openClass ? 'body-overlay-1' : ''" (click)="handleRemove()"></div>
 <header [class]="headerStyle + ' header sticky-bar'" [ngClass]="scroll ? 'stick' : 'z-10'">
   <div *ngIf="headerStyle.includes('header-type-2')" class="w-full header-contact mb-10">
     <div class="container">
@@ -39,7 +40,7 @@
           </nav>
           <div class="burger-icon visible-tablet visible-phone" [ngClass]="
 							headerStyle.includes('burger-white') ? 'burger-icon-white' : ''
-						" onClick="{handleOpen}">
+						" (click)="handleOpen()">
             <span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span
               class="burger-icon-bottom"></span>
           </div>
@@ -59,3 +60,63 @@
     </div>
   </div>
 </header>
+<div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar" [ngClass]="openClass">
+  <div class="mobile-header-wrapper-inner">
+    <div class="mobile-header-top">
+      <div class="user-account">
+        <img width={50} height={50} src="/assets/images/template/ava_1.png" alt="Moirai" />
+        <div class="content ml-10">
+          <h6 class="user-name">
+            Hi <span class="text-brand">Steven !</span>
+          </h6>
+          <p class="font-xs text-muted">
+            You have 5 new messages
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-header-content-area">
+      <div class="perfect-scroll">
+        <div class="mobile-menu-wrap mobile-header-border visible-phone visible-tablet">
+          <nav>
+            <ul class="mobile-menu font-heading">
+              <li *ngFor="let header of headers">
+                <a [routerLink]="header.url" class="active">{{header.content}}</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="mobile-account">
+          <h6 class="mb-10">Your Account</h6>
+          <ul class="mobile-menu font-heading">
+            <li>
+              <a routerLink="/">Profile</a>
+            </li>
+            <li>
+              <a routerLink="/">Work Preferences</a>
+            </li>
+            <li>
+              <a routerLink="/">My Boosted Shots</a>
+            </li>
+            <li>
+              <a routerLink="/">My Collections</a>
+            </li>
+            <li>
+              <a routerLink="/">Account Settings</a>
+            </li>
+            <li>
+              <a routerLink="/">Go Pro</a>
+            </li>
+            <li>
+              <a routerLink="/auth/page-login">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="site-copyright color-gray-400 ">
+          Copyright 2023 © Moirai - Agency Template.<br />Designed
+          by &nbsp;VZenLabs Team
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
