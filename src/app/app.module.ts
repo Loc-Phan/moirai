@@ -14,13 +14,10 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
 import { BlogRoutingModule } from './blog/blog-routing.module';
 import { ShopRoutingModule } from './shop/shop-routing.module';
 import { ContactRoutingModule } from './contact/contact-routing.module';
+import { BackToTopModule } from './shared/components/back-to-top/back-to-top.module';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HeaderComponent,
-		FooterComponent,
-	],
+	declarations: [AppComponent, HeaderComponent, FooterComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -34,6 +31,7 @@ import { ContactRoutingModule } from './contact/contact-routing.module';
 		BlogRoutingModule,
 		ShopRoutingModule,
 		ContactRoutingModule,
+		BackToTopModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

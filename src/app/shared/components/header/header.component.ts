@@ -5,7 +5,7 @@ import { Component, HostListener } from "@angular/core";
 	templateUrl: "./header.component.html",
 })
 export class HeaderComponent {
-	headerStyle = "header-style-6 normal-logo";
+	headerStyle = "normal-logo";
 	scroll: boolean = false;
 	headers = [
 		{
