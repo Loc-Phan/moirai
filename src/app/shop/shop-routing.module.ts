@@ -10,21 +10,8 @@ import { ThumbSliderModule } from "../shared/components/thumb-slider/thumb-slide
 
 const routes: Routes = [
 	{
-		path: "",
-		children: [
-			{
-				path: "shopping/page-shop-grid-1",
-				component: FirstShopComponent,
-			},
-			{
-				path: "shopping/page-shop-grid-2",
-				component: SecondShopComponent,
-			},
-			{
-				path: "shop/:slug",
-				component: DetailShopComponent,
-			},
-		],
+		path: "shop",
+		component: FirstShopComponent,
 	},
 ];
 

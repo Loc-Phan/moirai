@@ -12,20 +12,7 @@ import { PostsModule } from "../shared/components/posts/posts.module";
 const routes: Routes = [
 	{
 		path: "blog",
-		children: [
-			{
-				path: "blog-1",
-				component: FirstBlogComponent,
-			},
-			{
-				path: "blog-2",
-				component: SecondBlogComponent,
-			},
-			{
-				path: "blog-single",
-				component: SingleBlogComponent,
-			},
-		],
+		component: FirstBlogComponent,
 	},
 ];
 

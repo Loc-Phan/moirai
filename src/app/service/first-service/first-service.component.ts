@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { pricingData } from "src/app/mockData/pricingData";
 import { BestSellerData } from "src/app/shared/components/best-seller/best-seller.component";
 import { PricingData } from "src/app/shared/components/price-table/price-table.component";
 
@@ -39,52 +40,5 @@ export class FirstServiceComponent {
 			},
 		],
 	};
-	pricingData: PricingData[] = [
-		{
-			title: "Hemming Trousers",
-			decription:
-				"Make your perfect trousers the ideal length with our hemming service.",
-			features: [
-				"Precise Hemming",
-				"Customizable Fit",
-				"Length Adjustment",
-				"Professional Finishing",
-			],
-			pricing: 10,
-		},
-		{
-			title: "Replacing Buttons",
-			decription:
-				"Refresh and rejuvenate your clothing with our button replacement service.",
-			features: [
-				"Use Suitable Button Styles",
-				"Improved Functionality",
-				"Quality Selection",
-				"Attention to Detail",
-			],
-			pricing: 5,
-		},
-		{
-			title: "Replacing Zipper",
-			decription: "Enhance the your clothing with zipper replacement service.",
-			features: [
-				"Renewed Functionality",
-				"Extended Garment Lifespan",
-				"Customizable Options",
-				"Attention to Detail",
-			],
-			pricing: 5,
-		},
-		{
-			title: "Waist cinching",
-			decription: "Transform your clothing with our waist cinching service.",
-			features: [
-				"Flattering Silhouette",
-				"Tailored Adjustments",
-				"Personalized Style",
-				"Versatile Options",
-			],
-			pricing: 10,
-		},
-	];
+	pricingData: PricingData[] = pricingData;
 }

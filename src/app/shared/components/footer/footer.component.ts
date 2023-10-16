@@ -20,7 +20,7 @@ export class FooterComponent {
 				},
 				{
 					content: "Our Story",
-					url: "/career/page-career",
+					url: "/career",
 				},
 				{
 					content: "Our Commitment",
@@ -37,11 +37,11 @@ export class FooterComponent {
 			children: [
 				{
 					content: "Our Blog",
-					url: "/blog/blog-2",
+					url: "//blog",
 				},
 				{
 					content: "Cookie Policy",
-					url: "/pricing/page-pricing-1",
+					url: "/pricing",
 				},
 				{
 					content: "Office Center",
@@ -58,7 +58,7 @@ export class FooterComponent {
 			children: [
 				{
 					content: "FAQs",
-					url: "/faqs/page-faqs-1",
+					url: "/faqs",
 				},
 				{
 					content: "Editor Help",
@@ -74,7 +74,7 @@ export class FooterComponent {
 				},
 				{
 					content: "Contact Us",
-					url: "/page-contact",
+					url: "/contact",
 				},
 				{
 					content: "Support Center",
@@ -95,7 +95,7 @@ export class FooterComponent {
 				},
 				{
 					content: "Pricing",
-					url: "/pricing/page-pricing-2",
+					url: "//pricing",
 				},
 				{
 					content: "Reviews",
@@ -109,9 +109,9 @@ export class FooterComponent {
 		},
 	];
 	subFooter = [
-		{ content: "Privacy policy", url: "/page-terms" },
-		{ content: "Cookies", url: "/page-terms" },
-		{ content: "Terms of service", url: "/page-terms" },
+		{ content: "Privacy policy", url: "/" },
+		{ content: "Cookies", url: "/" },
+		{ content: "Terms of service", url: "/" },
 	];
 	socials = [
 		{ icon: "icon-facebook", url: "https://facebook.com" },

@@ -11,16 +11,7 @@ import { ContactBoxModule } from "../shared/components/contact-box/contact-box.m
 const routes: Routes = [
 	{
 		path: "pricing",
-		children: [
-			{
-				path: "page-pricing-1",
-				component: FirstPricingComponent,
-			},
-			{
-				path: "page-pricing-2",
-				component: SecondPricingComponent,
-			},
-		],
+		component: FirstPricingComponent,
 	},
 ];
 

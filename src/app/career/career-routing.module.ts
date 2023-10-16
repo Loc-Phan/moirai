@@ -11,16 +11,7 @@ import { AboutUsModule } from "../shared/components/about-us/about-us.module";
 const routes: Routes = [
 	{
 		path: "career",
-		children: [
-			{
-				path: "page-career",
-				component: FirstCareerComponent,
-			},
-			{
-				path: "page-career-detail",
-				component: DetailCareerComponent,
-			},
-		],
+		component: FirstCareerComponent,
 	},
 ];
 

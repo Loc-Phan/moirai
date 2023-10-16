@@ -6,13 +6,8 @@ import { ContactBoxModule } from "../shared/components/contact-box/contact-box.m
 
 const routes: Routes = [
 	{
-		path: "",
-		children: [
-			{
-				path: "page-contact",
-				component: ContactComponent,
-			},
-		],
+		path: "contact",
+		component: ContactComponent,
 	},
 ];
 

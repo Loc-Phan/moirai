@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Product } from "../first-shop/first-shop.component";
-import { secondData, viewedProductList } from "src/app/mockData/shopData";
+import { Product, secondData, viewedProductList } from "src/app/mockData/shopData";
 import { ActivatedRoute } from "@angular/router";
 import { firstUserComments } from "src/app/mockData/comments";
 

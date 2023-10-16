@@ -14,21 +14,8 @@ import { BlogsModule } from "../shared/components/blogs/blogs.module";
 
 const routes: Routes = [
 	{
-		path: "about",
-		children: [
-			{
-				path: "page-about-1",
-				component: FirstAboutComponent,
-			},
-			{
-				path: "page-about-2",
-				component: SecondAboutComponent,
-			},
-			{
-				path: "page-about-3",
-				component: ThirdAboutComponent,
-			},
-		],
+    path: "about",
+    component: SecondAboutComponent
 	},
 ];
 

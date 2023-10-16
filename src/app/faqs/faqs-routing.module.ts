@@ -9,16 +9,7 @@ import { TestimonialSliderModule } from "../shared/components/testimonial-slider
 const routes: Routes = [
 	{
 		path: "faqs",
-		children: [
-			{
-				path: "page-faqs-1",
-				component: FirstFaqComponent,
-			},
-			{
-				path: "page-faqs-2",
-				component: SecondFaqComponent,
-			},
-		],
+		component: FirstFaqComponent,
 	},
 ];
 

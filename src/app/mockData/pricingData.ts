@@ -1,4 +1,4 @@
-interface PricingData {
+export interface PricingData {
 	title: string;
 	decription: string;
 	features: string[];

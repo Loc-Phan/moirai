@@ -16,31 +16,31 @@ export class HeaderComponent {
 		},
 		{
 			content: "About",
-			url: "/about/page-about-2",
+			url: "/about",
 		},
 		{
 			content: "Services",
-			url: "/service/page-service-1",
+			url: "/service",
 		},
 		{
 			content: "Pricing",
-			url: "/pricing/page-pricing-1",
+			url: "/pricing",
 		},
-		{ content: "Career", url: "/career/page-career" },
+		{ content: "Career", url: "/career" },
 		{
 			content: "FAQ",
-			url: "/faqs/page-faqs-1",
+			url: "/faqs",
 		},
 		{
 			content: "Blog",
 		},
 		{
 			content: "Product",
-			url: "/shopping/page-shop-grid-1",
+			url: "/shop",
 		},
 		{
 			content: "Contact",
-			url: "/page-contact",
+			url: "/contact",
 		},
 	];
 	@HostListener("window:scroll", ["$event"])

@@ -12,16 +12,7 @@ import { WeDoSliderModule } from "../shared/components/we-do-slider/we-do-slider
 const routes: Routes = [
 	{
 		path: "service",
-		children: [
-			{
-				path: "page-service-1",
-				component: FirstServiceComponent,
-			},
-			{
-				path: "page-service-2",
-				component: SecondServiceComponent,
-			},
-		],
+		component: FirstServiceComponent,
 	},
 ];
 

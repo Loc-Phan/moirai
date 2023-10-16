@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Category, Product } from "../first-shop/first-shop.component";
+import { Category, Product } from "src/app/mockData/shopData";
 
 @Component({
 	selector: "second-shop-app",

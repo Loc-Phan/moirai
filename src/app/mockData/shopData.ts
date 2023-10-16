@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
 	id: number;
 	img: string;
 	brand: string;
@@ -8,7 +8,7 @@ interface Product {
 	newPrice: number;
 }
 
-interface Category {
+export interface Category {
 	id: number;
 	title: string;
 	imageUrl: string;

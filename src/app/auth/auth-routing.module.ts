@@ -7,18 +7,18 @@ import { SignUpComponent } from "./sign-up/sign-up.compoent";
 
 const routes: Routes = [
 	{
-		path: "auth",
+		path: "",
 		children: [
 			{
-				path: "page-login",
+				path: "sign-in",
 				component: SignInComponent,
 			},
 			{
-				path: "page-reset",
+				path: "reset-password",
 				component: ResetPasswordComponent,
 			},
 			{
-				path: "page-signup",
+				path: "sign-up",
 				component: SignUpComponent,
 			},
 		],

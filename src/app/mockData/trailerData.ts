@@ -59,7 +59,7 @@ export const trailerData: TrailerData = {
 				"Embrace sustainable fashion with our new line of clothing made from ethically sourced organic cotton and recycled materials, ensuring both style and environmental consciousness go hand in hand.",
 			thumbUrl: "/assets/images/page/homepage1/img-product-1.png",
 			bgColor: "bg-2",
-			link: "/service/page-service-1",
+			link: "/service",
 		},
 		{
 			id: 2,
@@ -68,7 +68,7 @@ export const trailerData: TrailerData = {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 			thumbUrl: "/assets/images/page/homepage1/img-1-2.jpg",
 			bgColor: "bg-1",
-			link: "/service/page-service-1",
+			link: "/service",
 		},
 		{
 			id: 3,
@@ -77,7 +77,7 @@ export const trailerData: TrailerData = {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 			thumbUrl: "/assets/images/page/homepage1/img-1-3.jpg",
 			bgColor: "bg-3",
-			link: "/service/page-service-1",
+			link: "/service",
 		},
 		{
 			id: 4,
@@ -86,7 +86,7 @@ export const trailerData: TrailerData = {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 			thumbUrl: "/assets/images/page/homepage1/img-1-4.jpg",
 			bgColor: "bg-4",
-			link: "/service/page-service-1",
+			link: "/service",
 		},
 		{
 			id: 5,
@@ -95,7 +95,7 @@ export const trailerData: TrailerData = {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 			thumbUrl: "/assets/images/page/homepage1/img-1-5.jpg",
 			bgColor: "bg-5",
-			link: "/service/page-service-1",
+			link: "/service",
 		},
 		{
 			id: 6,
@@ -104,7 +104,7 @@ export const trailerData: TrailerData = {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 			thumbUrl: "/assets/images/page/homepage1/img-1-6.jpg",
 			bgColor: "bg-6",
-			link: "/service/page-service-1",
+			link: "/service",
 		},
 	],
 };

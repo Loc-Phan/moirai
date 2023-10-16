@@ -48,13 +48,13 @@
       </div>
       <div class="header-right">
         <div class="block-signin">
-          <a routerLink="/auth/page-signup" [ngClass]="
+          <a routerLink="//sign-up" [ngClass]="
 							headerStyle.includes('header-btn-black')
-								? 'btn btn-black'
+								? 'btn btn-black icon-arrow-right-white'
 								: headerStyle.includes('header-btn-gray')
-								? 'btn btn-gray': headerStyle.includes('header-btn-green') ?
-								'btn btn-green-900' : 'btn btn-default'
-						" class="hover-up icon-arrow-right-white">Get Started</a>
+								? 'btn btn-gray icon-arrow-right-white': headerStyle.includes('header-btn-green') ?
+								'btn btn-green-900 icon-arrow-right-white' : 'btn btn-default icon-arrow-right'
+						" class="hover-up">Get Started</a>
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@
               <a routerLink="/">Go Pro</a>
             </li>
             <li>
-              <a routerLink="/auth/page-login">Sign Out</a>
+              <a routerLink="//sign-in">Sign Out</a>
             </li>
           </ul>
         </div>
