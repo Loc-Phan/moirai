@@ -5,9 +5,9 @@ import { FeedbackProp, feedbackData } from "src/app/mock-data/feedbackData";
 
 @Component({
 	selector: "first-career-app",
-	templateUrl: "./first-career.component.html",
+	templateUrl: "./career.component.html",
 })
-export class FirstCareerComponent {
+export class CareerComponent {
 	open = false;
 	fBData: FeedbackProp[] = feedbackData;
 	aboutUsContent = {

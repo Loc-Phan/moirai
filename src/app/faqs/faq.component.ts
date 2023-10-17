@@ -4,9 +4,9 @@ import { AccordionData } from "src/app/shared/components/accordion/accordion.com
 
 @Component({
 	selector: "first-faq-app",
-	templateUrl: "./first-faq.component.html",
+	templateUrl: "./faq.component.html",
 })
-export class FirstFaqComponent implements OnDestroy {
+export class FaqComponent implements OnDestroy {
 	accordionData: AccordionData[] = [
 		{
 			title: "Does altering pants affect their shape?",

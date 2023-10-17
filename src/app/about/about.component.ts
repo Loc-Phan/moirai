@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { AccordionData } from "src/app/shared/components/accordion/accordion.compoent";
 import { BlogData } from "src/app/shared/components/blogs/blogs.component";
+import { HeaderService } from "../services/header.service";
 
 @Component({
 	selector: "second-about-app",
@@ -88,4 +89,11 @@ export class AboutComponent {
 				"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature Id pro doctus mediocrem erroribus, diam nostro sed cu. Ea pri graeco tritani partiendo. Omittantur No tale choro fastidii his, pri cu epicuri perpetua. Enim dictas omittantur et duo, vocent lucilius quaestio mea ex. Ex illum officiis id.",
 		},
 	];
+	headerService = inject(HeaderService);
+	constructor() {
+		this.headerService.setHeaderStyleObs("header-style-6 normal-logo");
+	}
+	ngOnDestroy() {
+		this.headerService.setHeaderStyleObs("");
+	}
 }

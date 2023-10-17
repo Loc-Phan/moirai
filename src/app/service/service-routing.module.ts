@@ -1,7 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { FirstServiceComponent } from "./first-service/first-service.component";
+import { ServiceComponent } from "./service.component";
 import { BestSellerModule } from "../shared/components/best-seller/best-seller.module";
 import { PriceTableModule } from "../shared/components/price-table/price-table.module";
 import { NewsLetterModule } from "../shared/components/news-letter/news-letter.module";
@@ -11,7 +11,7 @@ import { WeDoSliderModule } from "../shared/components/we-do-slider/we-do-slider
 const routes: Routes = [
 	{
 		path: "service",
-		component: FirstServiceComponent,
+		component: ServiceComponent,
 	},
 ];
 
@@ -25,7 +25,7 @@ const routes: Routes = [
 		WeDoSliderModule,
 		RouterModule.forChild(routes),
 	],
-	declarations: [FirstServiceComponent],
+	declarations: [ServiceComponent],
 	exports: [RouterModule],
 })
 export class ServiceRoutingModule {}

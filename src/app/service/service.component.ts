@@ -1,13 +1,14 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { pricingData } from "src/app/mock-data/pricingData";
+import { HeaderService } from "src/app/services/header.service";
 import { BestSellerData } from "src/app/shared/components/best-seller/best-seller.component";
 import { PricingData } from "src/app/shared/components/price-table/price-table.component";
 
 @Component({
 	selector: "first-service-app",
-	templateUrl: "./first-service.component.html",
+	templateUrl: "./service.component.html",
 })
-export class FirstServiceComponent {
+export class ServiceComponent {
 	bestSellerData: BestSellerData = {
 		tag: "Built Exclusively For You",
 		title: "Precision Fixes: Quality Commitment for Your Clothes",
@@ -41,4 +42,11 @@ export class FirstServiceComponent {
 		],
 	};
 	pricingData: PricingData[] = pricingData;
+	headerService = inject(HeaderService);
+	constructor() {
+		this.headerService.setHeaderStyleObs("normal-logo header-btn-black");
+	}
+	ngOnDestroy() {
+		this.headerService.setHeaderStyleObs("");
+	}
 }

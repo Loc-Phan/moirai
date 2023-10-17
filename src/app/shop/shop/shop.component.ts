@@ -11,9 +11,9 @@ import { PostData } from "src/app/shared/components/posts/posts.component";
 
 @Component({
 	selector: "first-shop-app",
-	templateUrl: "./first-shop.component.html",
+	templateUrl: "./shop.component.html",
 })
-export class FirstShopComponent {
+export class ShopComponent {
 	categoryList: Category[] = categoryList;
 	data: Product[] = secondData;
 	viewedProductList: Product[] = viewedProductList;

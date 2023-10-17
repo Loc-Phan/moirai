@@ -3,8 +3,8 @@ import { BlogData, fifthBlogsData } from "src/app/mock-data/blogData";
 
 @Component({
 	selector: "first-blog-app",
-	templateUrl: "./first-blog.component.html",
+	templateUrl: "./blog.component.html",
 })
-export class FirstBlogComponent {
+export class BlogComponent {
 	blogsData: BlogData[] = fifthBlogsData;
 }
