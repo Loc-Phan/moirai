@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
-import { TrailerData, trailerData } from "../mockData/trailerData";
+import { TrailerData, trailerData } from "../mock-data/trailerData";
 import { BestSellerData } from "../shared/components/best-seller/best-seller.component";
-import { bestSellerData } from "../mockData/bestSellerData";
-import { BlogData, firstBlogsData } from "../mockData/blogData";
+import { bestSellerData } from "../mock-data/bestSellerData";
+import { BlogData, firstBlogsData } from "../mock-data/blogData";
 import { PricingData } from "../shared/components/price-table/price-table.component";
-import { pricingData } from "../mockData/pricingData";
-import { AboutUsData, aboutData } from "../mockData/aboutUsData";
+import { pricingData } from "../mock-data/pricingData";
+import { AboutUsData, aboutData } from "../mock-data/aboutUsData";
 
 @Component({
 	selector: "home-app",

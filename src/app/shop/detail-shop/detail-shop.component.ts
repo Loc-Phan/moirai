@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { Product, secondData, viewedProductList } from "src/app/mockData/shopData";
+import { Product, secondData, viewedProductList } from "src/app/mock-data/shopData";
 import { ActivatedRoute } from "@angular/router";
-import { firstUserComments } from "src/app/mockData/comments";
+import { firstUserComments } from "src/app/mock-data/comments";
 
 interface Comment {
 	id: number;

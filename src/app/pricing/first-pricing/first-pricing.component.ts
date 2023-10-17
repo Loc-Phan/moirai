@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import { FAQsData, faqsInfo } from "src/app/mockData/faqsData";
-import { FeedbackProp, feedbackData } from "src/app/mockData/feedbackData";
-import { pricingData, PricingData } from "src/app/mockData/pricingData";
+import { FAQsData, faqsInfo } from "src/app/mock-data/faqsData";
+import { FeedbackProp, feedbackData } from "src/app/mock-data/feedbackData";
+import { pricingData, PricingData } from "src/app/mock-data/pricingData";
 
 @Component({
 	selector: "first-pricing-app",

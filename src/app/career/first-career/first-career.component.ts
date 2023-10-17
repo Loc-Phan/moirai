@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import { AboutUsData, secondAboutData } from "src/app/mockData/aboutUsData";
-import { BlogData, sixthBlogsData } from "src/app/mockData/blogData";
-import { FeedbackProp, feedbackData } from "src/app/mockData/feedbackData";
+import { AboutUsData, secondAboutData } from "src/app/mock-data/aboutUsData";
+import { BlogData, sixthBlogsData } from "src/app/mock-data/blogData";
+import { FeedbackProp, feedbackData } from "src/app/mock-data/feedbackData";
 
 @Component({
 	selector: "first-career-app",

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { pricingData } from "src/app/mockData/pricingData";
+import { pricingData } from "src/app/mock-data/pricingData";
 import { BestSellerData } from "src/app/shared/components/best-seller/best-seller.component";
 import { PricingData } from "src/app/shared/components/price-table/price-table.component";
 
