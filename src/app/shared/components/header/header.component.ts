@@ -1,4 +1,4 @@
-import { Component, HostListener } from "@angular/core";
+import { Component, HostListener, Input } from "@angular/core";
 
 @Component({
 	selector: "header-app",
@@ -6,7 +6,7 @@ import { Component, HostListener } from "@angular/core";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
-	headerStyle = "normal-logo";
+	@Input() headerStyle = "normal-logo";
 	scroll: boolean = false;
 	openClass: string = "";
 	headers = [
