@@ -46,7 +46,7 @@
           <div class="category-grid-3 hover-up">
             <div class="category-img flex justify-center">
               <a [routerLink]="category.link">
-                <img width={81} height={81} [src]="category.imageUrl" alt="Moirai" />
+                <img class="w-[5rem] h-[5rem]" [src]="category.imageUrl" alt="Moirai" />
               </a>
             </div>
             <h4 class="text-heading-5 mb-5 lg:min-h-[3rem] 2xl:min-h-[1.5rem]">{{category.title}}</h4>
@@ -144,7 +144,7 @@
                 {{item.brand}}
               </span>
               <a [routerLink]="'/shop/'+item.id">
-                <h3 class="text-body-lead color-gray-900 lg:min-h-[3rem] 2xl:min-h-[1.5rem]">
+                <h3 class="text-body-lead color-gray-900 lg:min-h-[3rem]">
                   {{item.title}}
                 </h3>
               </a>
@@ -172,8 +172,8 @@
                   <span>&nbsp;rates )</span>
                 </span>
               </div>
-              <div class="d-flex mt-20">
-                <div class="box-prices">
+              <div class="flex justify-between mt-20">
+                <div class="box-prices w-2/3">
                   <span class="price-regular mr-5">
                     ${{item.oldPrice}}
                   </span>
@@ -181,7 +181,7 @@
                     ${{item.newPrice}}
                   </span>
                 </div>
-                <div class="button-add text-end">
+                <div class="text-end w-1/3">
 
                   <a routerLink="/" class="btn btn-cart">Add</a>
                 </div>
