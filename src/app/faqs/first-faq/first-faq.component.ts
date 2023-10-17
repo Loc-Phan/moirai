@@ -1,11 +1,12 @@
-import { Component } from "@angular/core";
+import { Component, OnDestroy, inject } from "@angular/core";
+import { HeaderService } from "src/app/services/header.service";
 import { AccordionData } from "src/app/shared/components/accordion/accordion.compoent";
 
 @Component({
 	selector: "first-faq-app",
 	templateUrl: "./first-faq.component.html",
 })
-export class FirstFaqComponent {
+export class FirstFaqComponent implements OnDestroy {
 	accordionData: AccordionData[] = [
 		{
 			title: "Does altering pants affect their shape?",
@@ -51,4 +52,11 @@ export class FirstFaqComponent {
 				"Altered or tailored products are not eligible for exchange or return. In the event that you receive inaccurately altered or defective products, you can contact our Customer Service team for assistance.",
 		},
 	];
+	headerService = inject(HeaderService);
+	constructor() {
+		this.headerService.setHeaderStyleObs("header-style-5");
+	}
+	ngOnDestroy() {
+		this.headerService.setHeaderStyleObs("");
+	}
 }

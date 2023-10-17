@@ -1,12 +1,13 @@
-import { Component, HostListener, Input } from "@angular/core";
+import { Component, HostListener, Inject } from "@angular/core";
+import { HeaderService } from "src/app/services/header.service";
 
 @Component({
 	selector: "header-app",
-  templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+	templateUrl: "./header.component.html",
+	styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
-	@Input() headerStyle = "normal-logo";
+	headerStyle = "";
 	scroll: boolean = false;
 	openClass: string = "";
 	headers = [
@@ -43,6 +44,11 @@ export class HeaderComponent {
 			url: "/contact",
 		},
 	];
+	constructor(@Inject(HeaderService) headerService: HeaderService) {
+		headerService
+			.getHeaderStyleObs()
+			.subscribe((style) => (this.headerStyle = style));
+	}
 	@HostListener("window:scroll", ["$event"])
 	onScroll() {
 		let scrollCheck: boolean = window.scrollY > 100;
@@ -54,10 +60,10 @@ export class HeaderComponent {
 		document.body.classList.add("mobile-menu-active");
 		this.openClass = "sidebar-visible";
 	};
-  handleRemove() {
-    if (this.openClass === "sidebar-visible") {
+	handleRemove() {
+		if (this.openClass === "sidebar-visible") {
 			this.openClass = "";
 			document.body.classList.remove("mobile-menu-active");
 		}
-  }
+	}
 }
