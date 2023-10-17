@@ -2,7 +2,6 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { FirstShopComponent } from "./first-shop/first-shop.component";
-import { SecondShopComponent } from "./second-shop/second-shop.component";
 import { DetailShopComponent } from "./detail-shop/detail-shop.component";
 import { PostsModule } from "../shared/components/posts/posts.module";
 import { DownloadBannerModule } from "../shared/components/download-banner/download-banner.module";
@@ -11,7 +10,10 @@ import { ThumbSliderModule } from "../shared/components/thumb-slider/thumb-slide
 const routes: Routes = [
 	{
 		path: "shop",
-		component: FirstShopComponent,
+		children: [
+			{ path: "", component: FirstShopComponent },
+			{ path: ":slug", component: DetailShopComponent },
+		],
 	},
 ];
 
@@ -23,7 +25,7 @@ const routes: Routes = [
     ThumbSliderModule,
 		RouterModule.forChild(routes),
 	],
-	declarations: [FirstShopComponent, SecondShopComponent, DetailShopComponent],
+	declarations: [FirstShopComponent, DetailShopComponent],
 	exports: [RouterModule],
 })
 export class ShopRoutingModule {}

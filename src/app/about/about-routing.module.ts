@@ -1,9 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { FirstAboutComponent } from "./first-about/first-about.component";
-import { SecondAboutComponent } from "./second-about/second-about.component";
-import { ThirdAboutComponent } from "./third-about/third-about.component";
 import { ContactUsComponent } from "../shared/components/contact-us/contact-us.component";
 import { BestSellerModule } from "../shared/components/best-seller/best-seller.module";
 import { AccordionModule } from "../shared/components/accordion/accordion.module";
@@ -11,11 +8,12 @@ import { TestimonialSliderModule } from "../shared/components/testimonial-slider
 import { TeamModule } from "../shared/components/team/team.module";
 import { FeedbackModule } from "../shared/components/feedback/feedback.module";
 import { BlogsModule } from "../shared/components/blogs/blogs.module";
+import { AboutComponent } from "./about.component";
 
 const routes: Routes = [
 	{
     path: "about",
-    component: SecondAboutComponent
+    component: AboutComponent
 	},
 ];
 
@@ -30,10 +28,8 @@ const routes: Routes = [
     TeamModule,
 		RouterModule.forChild(routes),
 	],
-	declarations: [
-		FirstAboutComponent,
-		SecondAboutComponent,
-		ThirdAboutComponent,
+  declarations: [
+    AboutComponent,
 		ContactUsComponent,
 	],
 	exports: [RouterModule],

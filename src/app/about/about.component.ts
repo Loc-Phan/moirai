@@ -4,9 +4,9 @@ import { BlogData } from "src/app/shared/components/blogs/blogs.component";
 
 @Component({
 	selector: "second-about-app",
-	templateUrl: "./second-about.component.html",
+	templateUrl: "./about.component.html",
 })
-export class SecondAboutComponent {
+export class AboutComponent {
 	blogsData: BlogData[] = [
 		{
 			tag: "Lastest trend",

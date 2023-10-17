@@ -2,7 +2,6 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { FirstServiceComponent } from "./first-service/first-service.component";
-import { SecondServiceComponent } from "./second-service/second-service.component";
 import { BestSellerModule } from "../shared/components/best-seller/best-seller.module";
 import { PriceTableModule } from "../shared/components/price-table/price-table.module";
 import { NewsLetterModule } from "../shared/components/news-letter/news-letter.module";
@@ -22,11 +21,11 @@ const routes: Routes = [
 		BestSellerModule,
 		PriceTableModule,
 		NewsLetterModule,
-    AccordionModule,
-    WeDoSliderModule,
+		AccordionModule,
+		WeDoSliderModule,
 		RouterModule.forChild(routes),
 	],
-	declarations: [FirstServiceComponent,SecondServiceComponent],
+	declarations: [FirstServiceComponent],
 	exports: [RouterModule],
 })
 export class ServiceRoutingModule {}
