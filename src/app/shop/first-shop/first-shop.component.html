@@ -49,7 +49,7 @@
                 <img width={81} height={81} [src]="category.imageUrl" alt="Moirai" />
               </a>
             </div>
-            <h4 class="text-heading-5 mb-5">{{category.title}}</h4>
+            <h4 class="text-heading-5 mb-5 lg:min-h-[3rem] 2xl:min-h-[1.5rem]">{{category.title}}</h4>
             <p class="text-body-text color-gray-500">{{category.detail}}</p>
           </div>
         </div>
@@ -144,7 +144,7 @@
                 {{item.brand}}
               </span>
               <a [routerLink]="'/shop/'+item.id">
-                <h3 class="text-body-lead color-gray-900">
+                <h3 class="text-body-lead color-gray-900 lg:min-h-[3rem] 2xl:min-h-[1.5rem]">
                   {{item.title}}
                 </h3>
               </a>
