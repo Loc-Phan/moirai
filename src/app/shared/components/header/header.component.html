@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="container">
-    <div class="main-header">
+    <div class="main-header flex justify-between">
       <div class="header-left">
         <div class="header-logo">
           <a routerLink="/" class="d-flex">
@@ -46,8 +46,20 @@
           </div>
         </div>
       </div>
-      <div class="header-right">
-        <div class="block-signin">
+      <div class="header-right flex justify-end gap-3">
+        <div class="cursor-pointer w-7 h-7 relative" routerLink="/wishlist">
+          <heart-icon-component></heart-icon-component>
+          <div *ngIf="wishList.length>0"
+            class="absolute -top-2 -right-3 flex justify-center items-center w-[22px] h-[22px] rounded-full bg-[rgba(251,203,59,1)] text-sm text-[#222222]">
+            {{wishList.length}}</div>
+        </div>
+        <div class="cursor-pointer w-7 h-7 relative" routerLink="/cart">
+          <cart-icon-component></cart-icon-component>
+          <div *ngIf="cart.length>0"
+            class="absolute -top-2 -right-3 flex justify-center items-center w-[22px] h-[22px] rounded-full bg-[rgba(251,203,59,1)] text-sm text-[#222222]">
+            {{cart.length}}</div>
+        </div>
+        <!-- <div class="block-signin">
           <a routerLink="//sign-up" [ngClass]="
 							headerStyle.includes('header-btn-black')
 								? 'btn btn-black icon-arrow-right-white'
@@ -55,7 +67,7 @@
 								? 'btn btn-gray icon-arrow-right-white': headerStyle.includes('header-btn-green') ?
 								'btn btn-green-900 icon-arrow-right-white' : 'btn btn-default icon-arrow-right'
 						" class="hover-up">Get Started</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

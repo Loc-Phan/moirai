@@ -7,6 +7,7 @@ import {
 	secondData,
 	viewedProductList,
 } from "src/app/mock-data/shopData";
+import { WishListService } from "src/app/services/wishlist.service";
 import { PostData } from "src/app/shared/components/posts/posts.component";
 
 @Component({
@@ -18,4 +19,8 @@ export class ShopComponent {
 	data: Product[] = secondData;
 	viewedProductList: Product[] = viewedProductList;
 	postsData: PostData[] = postsData;
+	constructor(private wishListService: WishListService) {}
+  handleAddWishList(item: Product) {
+    this.wishListService.addWishList(item);
+  }
 }

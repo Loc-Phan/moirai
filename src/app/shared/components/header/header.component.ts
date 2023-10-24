@@ -1,5 +1,8 @@
 import { Component, HostListener, Inject } from "@angular/core";
+import { Product } from "src/app/mock-data/shopData";
+import { CartService } from "src/app/services/cart.service";
 import { HeaderService } from "src/app/services/header.service";
+import { WishListService } from "src/app/services/wishlist.service";
 
 @Component({
 	selector: "header-app",
@@ -10,6 +13,8 @@ export class HeaderComponent {
 	headerStyle = "";
 	scroll: boolean = false;
 	openClass: string = "";
+	wishList!: Product[];
+	cart!: Product[];
 	headers = [
 		{
 			content: "Home",
@@ -44,7 +49,13 @@ export class HeaderComponent {
 			url: "/contact",
 		},
 	];
-	constructor(@Inject(HeaderService) headerService: HeaderService) {
+	constructor(
+		@Inject(HeaderService) headerService: HeaderService,
+		private wishListService: WishListService,
+		private cartService: CartService
+	) {
+		this.wishList = this.wishListService.getWishList();
+		this.cart = this.cartService.getCartList();
 		headerService
 			.getHeaderStyleObs()
 			.subscribe((style) => (this.headerStyle = style));

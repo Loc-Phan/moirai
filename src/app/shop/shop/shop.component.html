@@ -134,7 +134,7 @@
             </a>
             <div class="box-quick-view">
               <div class="quick-view">
-                <a routerLink="/" class="like-product"></a>
+                <div class="cursor-pointer" (click)="handleAddWishList(item)" class="like-product"></div>
                 <a routerLink="/" class="shuffle-product"></a>
                 <a routerLink="/" class="view-product"></a>
               </div>
@@ -175,10 +175,10 @@
               <div class="flex justify-between mt-20">
                 <div class="box-prices w-2/3">
                   <span class="price-regular mr-5">
-                    ${{item.oldPrice}}
+                    ${{item.newPrice}}
                   </span>
                   <span class="price-regular price-line">
-                    ${{item.newPrice}}
+                    ${{item.oldPrice}}
                   </span>
                 </div>
                 <div class="text-end w-1/3">

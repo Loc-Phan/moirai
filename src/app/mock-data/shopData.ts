@@ -23,8 +23,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Form Slim Crop",
 		rating: 84,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 	{
 		id: 2,
@@ -32,8 +32,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Corduroy Form Straight",
 		rating: 68,
-		oldPrice: 2.806,
-		newPrice: 22.51,
+		oldPrice: 22.5106,
+		newPrice: 28,
 	},
 
 	{
@@ -42,8 +42,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Form Fitted T-shirt",
 		rating: 76,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 
 	{
@@ -52,8 +52,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Slim 2 wire coat",
 		rating: 125,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 
 	{
@@ -62,8 +62,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Regular T-shirt",
 		rating: 84,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 
 	{
@@ -72,8 +72,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Tote Linen",
 		rating: 68,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 
 	{
@@ -82,8 +82,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Bucket Unisex",
 		rating: 76,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 
 	{
@@ -92,8 +92,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Corduroy Pant",
 		rating: 125,
-		oldPrice: 2.801,
-		newPrice: 22.51,
+		oldPrice: 22.5101,
+		newPrice: 28,
 	},
 
 	{
@@ -102,8 +102,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Outdoor Waterproof Loudspeaker Stereo Surround Support",
 		rating: 84,
-		oldPrice: 2.805,
-		newPrice: 22.51,
+		oldPrice: 22.5105,
+		newPrice: 28,
 	},
 
 	{
@@ -112,8 +112,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "uisine Smoking Gun Meat Burn Smokehouse",
 		rating: 68,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 
 	{
@@ -122,8 +122,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Walnut Gaming Headset Holder with Solid Metal",
 		rating: 76,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 
 	{
@@ -132,8 +132,8 @@ export const firstData: Product[] = [
 		brand: "Routine",
 		title: "Headphones Surround 3D Deep Bass Sport Gaming",
 		rating: 125,
-		oldPrice: 2.8,
-		newPrice: 22.51,
+		oldPrice: 22.51,
+		newPrice: 28,
 	},
 ];
 
@@ -144,8 +144,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 2,
@@ -153,8 +153,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Argyle Cotton-blend Top",
 		rating: 68,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -163,8 +163,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Check Panel Cotton Jogging Pants",
 		rating: 76,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -173,8 +173,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Baby Ombré Cotton Dress",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -183,8 +183,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Clover Flip Floral Skirt",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -193,8 +193,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Dioriviera Shorts",
 		rating: 68,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -203,8 +203,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Dioriviera Shorts",
 		rating: 76,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -213,8 +213,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Disney 101 Dalmatians Cotton Jersey Dress",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -223,8 +223,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "EKD Cotton Silk Jacquard Sweater",
 		rating: 84,
-		newPrice: 2.805,
-		oldPrice: 22.51,
+		newPrice: 22.5105,
+		oldPrice: 28,
 	},
 
 	{
@@ -233,8 +233,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Givenchy Mini Shorts In Cotton",
 		rating: 68,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -243,8 +243,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Knit Sweater With Button Detail",
 		rating: 76,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -253,8 +253,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Logo Cotton Jersey T-shirt",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -263,8 +263,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Logo Cotton Jersey T-shirt",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -273,8 +273,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Large Dior Book Tote",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -283,8 +283,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Beachview Bucket Hat",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -293,8 +293,8 @@ export const secondData: Product[] = [
 		brand: "Fashion",
 		title: "Eternal N°5 Necklace",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 ];
 
@@ -305,8 +305,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 2,
@@ -314,8 +314,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Argyle Cotton-blend Top",
 		rating: 68,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -324,8 +324,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 76,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -334,8 +334,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Baby Ombré Cotton Dress",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -344,8 +344,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Clover Flip Floral Skirt",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -354,8 +354,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Dioriviera Shorts",
 		rating: 68,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -364,8 +364,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Dioriviera Shorts",
 		rating: 76,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -374,8 +374,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Disney 101 Dalmatians Cotton Jersey Dress",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -384,8 +384,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "EKD Cotton Silk Jacquard Sweater",
 		rating: 84,
-		newPrice: 2.805,
-		oldPrice: 22.51,
+		newPrice: 22.5105,
+		oldPrice: 28,
 	},
 
 	{
@@ -394,8 +394,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Givenchy Mini Shorts In Cotton",
 		rating: 68,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -404,8 +404,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Knit Sweater With Button Detail",
 		rating: 76,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -414,8 +414,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Logo Cotton Jersey T-shirt",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -424,8 +424,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Logo Cotton Jersey T-shirt",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -434,8 +434,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Large Dior Book Tote",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 
 	{
@@ -444,8 +444,8 @@ export const thirdData: Product[] = [
 		brand: "Fashion",
 		title: "Beachview Bucket Hat",
 		rating: 125,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 ];
 
@@ -456,8 +456,8 @@ export const popularProducts: Product[] = [
 		brand: "Fashion",
 		title: "Logo Cotton Jersey T-shirt",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 2,
@@ -465,8 +465,8 @@ export const popularProducts: Product[] = [
 		brand: "Fashion",
 		title: " Jersey Dress",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 3,
@@ -474,8 +474,8 @@ export const popularProducts: Product[] = [
 		brand: "Fashion",
 		title: "Givenchy Mini Shorts",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 4,
@@ -483,8 +483,8 @@ export const popularProducts: Product[] = [
 		brand: "Fashion",
 		title: "Knit Sweater",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 5,
@@ -492,8 +492,8 @@ export const popularProducts: Product[] = [
 		brand: "Fashion",
 		title: "EKD Cotton",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 6,
@@ -501,8 +501,8 @@ export const popularProducts: Product[] = [
 		brand: "Fashion",
 		title: "Bucket Hat",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 	{
 		id: 7,
@@ -510,8 +510,8 @@ export const popularProducts: Product[] = [
 		brand: "Fashion",
 		title: "Chanel Belts",
 		rating: 84,
-		newPrice: 2.8,
-		oldPrice: 22.51,
+		newPrice: 22.51,
+		oldPrice: 28,
 	},
 ];
 
@@ -609,8 +609,8 @@ export const viewedProductList: Product[] = [
 		brand: "Fashion",
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
-		oldPrice: 29.8,
-		newPrice: 29.8,
+		oldPrice: 28,
+		newPrice: 22.51,
 	},
 	{
 		id: 2,
@@ -618,8 +618,8 @@ export const viewedProductList: Product[] = [
 		brand: "Fashion",
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
-		oldPrice: 29.8,
-		newPrice: 29.8,
+		oldPrice: 28,
+		newPrice: 22.51,
 	},
 	{
 		id: 3,
@@ -627,8 +627,8 @@ export const viewedProductList: Product[] = [
 		brand: "Fashion",
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
-		oldPrice: 29.8,
-		newPrice: 29.8,
+		oldPrice: 28,
+		newPrice: 22.51,
 	},
 	{
 		id: 4,
@@ -636,8 +636,8 @@ export const viewedProductList: Product[] = [
 		brand: "Fashion",
 		title: "Eternal N°5 Necklace",
 		rating: 84,
-		oldPrice: 29.8,
-		newPrice: 29.8,
+		oldPrice: 28,
+		newPrice: 22.51,
 	},
 	{
 		id: 5,
@@ -645,8 +645,8 @@ export const viewedProductList: Product[] = [
 		brand: "Fashion",
 		title: "Large Dior Book Tote",
 		rating: 84,
-		oldPrice: 29.8,
-		newPrice: 29.8,
+		oldPrice: 28,
+		newPrice: 22.51,
 	},
 	{
 		id: 6,
@@ -654,7 +654,7 @@ export const viewedProductList: Product[] = [
 		brand: "Fashion",
 		title: "Clover Flip Floral Skirt",
 		rating: 84,
-		oldPrice: 29.8,
-		newPrice: 29.8,
+		oldPrice: 28,
+		newPrice: 22.51,
 	},
 ];

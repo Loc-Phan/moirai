@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from "./shared/components/header/header.component";
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeRoutingModule } from "./home/home-routing.module";
 import { AboutRoutingModule } from './about/about-routing.module';
@@ -15,12 +14,15 @@ import { BlogRoutingModule } from './blog/blog-routing.module';
 import { ShopRoutingModule } from './shop/shop-routing.module';
 import { ContactRoutingModule } from './contact/contact-routing.module';
 import { BackToTopModule } from './shared/components/back-to-top/back-to-top.module';
+import { HeaderModule } from './shared/components/header/header.module';
+import { WishListModule } from './wishlist/wishlist-routing.module';
 
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, FooterComponent],
+	declarations: [AppComponent, FooterComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
+		HeaderModule,
 		HomeRoutingModule,
 		AboutRoutingModule,
 		FaqRoutingModule,
@@ -32,6 +34,7 @@ import { BackToTopModule } from './shared/components/back-to-top/back-to-top.mod
 		ShopRoutingModule,
 		ContactRoutingModule,
 		BackToTopModule,
+		WishListModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

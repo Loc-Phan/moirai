@@ -23,7 +23,9 @@ export class DetailShopComponent implements OnInit {
 	activeIndex = 1;
 	userComments = firstUserComments;
 	viewedProducts = viewedProductList;
-	handleOnClick(i: number) {}
+  handleOnClick(i: number) {
+    this.activeIndex = i;
+  }
 	constructor(private route: ActivatedRoute) {}
 	ngOnInit() {
 		this.slug = this.route.snapshot.paramMap.get("slug");
