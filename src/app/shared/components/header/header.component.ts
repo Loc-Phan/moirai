@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject } from "@angular/core";
+import { Component, HostListener, Inject, OnInit } from "@angular/core";
 import { Product } from "src/app/mock-data/shopData";
 import { CartService } from "src/app/services/cart.service";
 import { HeaderService } from "src/app/services/header.service";
@@ -9,7 +9,7 @@ import { WishListService } from "src/app/services/wishlist.service";
 	templateUrl: "./header.component.html",
 	styleUrls: ["./header.component.scss"],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 	headerStyle = "";
 	scroll: boolean = false;
 	openClass: string = "";
@@ -54,8 +54,6 @@ export class HeaderComponent {
 		private wishListService: WishListService,
 		private cartService: CartService
 	) {
-		this.wishList = this.wishListService.getWishList();
-		this.cart = this.cartService.getCartList();
 		headerService
 			.getHeaderStyleObs()
 			.subscribe((style) => (this.headerStyle = style));
@@ -76,5 +74,9 @@ export class HeaderComponent {
 			this.openClass = "";
 			document.body.classList.remove("mobile-menu-active");
 		}
+	}
+	ngOnInit() {
+		this.wishList = this.wishListService.getWishList();
+		this.cart = this.cartService.getCartList();
 	}
 }

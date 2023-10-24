@@ -16,6 +16,7 @@ import { ContactRoutingModule } from './contact/contact-routing.module';
 import { BackToTopModule } from './shared/components/back-to-top/back-to-top.module';
 import { HeaderModule } from './shared/components/header/header.module';
 import { WishListModule } from './wishlist/wishlist-routing.module';
+import { CartModule } from './cart/cart-routing.module';
 
 @NgModule({
 	declarations: [AppComponent, FooterComponent],
@@ -35,6 +36,7 @@ import { WishListModule } from './wishlist/wishlist-routing.module';
 		ContactRoutingModule,
 		BackToTopModule,
 		WishListModule,
+		CartModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

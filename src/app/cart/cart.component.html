@@ -11,12 +11,12 @@
           <th>Stock status</th>
         </tr>
         <tbody>
-          <tr *ngIf="wishList.length===0; else table" class="stand-up">
+          <tr *ngIf="productList.length===0; else table" class="stand-up">
             <th colspan="3">No products added to the wishlist
             </th>
           </tr>
           <ng-template #table>
-            <tr *ngFor="let item of wishList">
+            <tr *ngFor="let item of productList">
               <th>
                 <a class="flex gap-3 items-center cursor-pointer" [routerLink]="'/shop/'+item.id">
                   <img class="w-32 h-32" [src]="'assets/images/page/shop1/'+item.img" alt="product" />
@@ -30,11 +30,8 @@
                 <div class="flex justify-between items-center">
                   <div class="flex gap-4 items-center">
                     <p class="text-[#297e29]">In Stock</p>
-                    <div>
-                      <button class="btn btn-green-full" (click)="addToCart(item)">Add to cart</button>
-                    </div>
                   </div>
-                  <div (click)="removeWishProduct(item)" class="btn-close cursor-pointer"></div>
+                  <div (click)="removeProduct(item)" class="btn-close cursor-pointer"></div>
                 </div>
               </th>
             </tr>

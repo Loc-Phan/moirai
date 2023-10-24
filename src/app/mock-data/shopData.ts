@@ -6,6 +6,7 @@ export interface Product {
 	rating: number;
 	oldPrice: number;
 	newPrice: number;
+	qty: number;
 }
 
 export interface Category {
@@ -16,127 +17,6 @@ export interface Category {
 	link: string;
 }
 
-export const firstData: Product[] = [
-	{
-		id: 1,
-		img: "sp1.png",
-		brand: "Routine",
-		title: "Form Slim Crop",
-		rating: 84,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-	{
-		id: 2,
-		img: "sp2.png",
-		brand: "Routine",
-		title: "Corduroy Form Straight",
-		rating: 68,
-		oldPrice: 22.5106,
-		newPrice: 28,
-	},
-
-	{
-		id: 3,
-		img: "sp3.png",
-		brand: "Routine",
-		title: "Form Fitted T-shirt",
-		rating: 76,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-
-	{
-		id: 4,
-		img: "sp4.png",
-		brand: "Routine",
-		title: "Slim 2 wire coat",
-		rating: 125,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-
-	{
-		id: 5,
-		img: "sp5.png",
-		brand: "Routine",
-		title: "Regular T-shirt",
-		rating: 84,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-
-	{
-		id: 6,
-		img: "sp6.png",
-		brand: "Routine",
-		title: "Tote Linen",
-		rating: 68,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-
-	{
-		id: 7,
-		img: "sp7.png",
-		brand: "Routine",
-		title: "Bucket Unisex",
-		rating: 76,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-
-	{
-		id: 8,
-		img: "sp8.png",
-		brand: "Routine",
-		title: "Corduroy Pant",
-		rating: 125,
-		oldPrice: 22.5101,
-		newPrice: 28,
-	},
-
-	{
-		id: 9,
-		img: "sp5.png",
-		brand: "Routine",
-		title: "Outdoor Waterproof Loudspeaker Stereo Surround Support",
-		rating: 84,
-		oldPrice: 22.5105,
-		newPrice: 28,
-	},
-
-	{
-		id: 10,
-		img: "sp6.png",
-		brand: "Routine",
-		title: "uisine Smoking Gun Meat Burn Smokehouse",
-		rating: 68,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-
-	{
-		id: 11,
-		img: "sp7.png",
-		brand: "Routine",
-		title: "Walnut Gaming Headset Holder with Solid Metal",
-		rating: 76,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-
-	{
-		id: 12,
-		img: "sp8.png",
-		brand: "Routine",
-		title: "Headphones Surround 3D Deep Bass Sport Gaming",
-		rating: 125,
-		oldPrice: 22.51,
-		newPrice: 28,
-	},
-];
-
 export const secondData: Product[] = [
 	{
 		id: 1,
@@ -146,6 +26,7 @@ export const secondData: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 	{
 		id: 2,
@@ -155,6 +36,7 @@ export const secondData: Product[] = [
 		rating: 68,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -165,6 +47,7 @@ export const secondData: Product[] = [
 		rating: 76,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -175,6 +58,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -185,6 +69,7 @@ export const secondData: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -195,6 +80,7 @@ export const secondData: Product[] = [
 		rating: 68,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -205,6 +91,7 @@ export const secondData: Product[] = [
 		rating: 76,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -215,6 +102,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -225,6 +113,7 @@ export const secondData: Product[] = [
 		rating: 84,
 		newPrice: 22.5105,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -235,6 +124,7 @@ export const secondData: Product[] = [
 		rating: 68,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -245,6 +135,7 @@ export const secondData: Product[] = [
 		rating: 76,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -255,6 +146,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -265,6 +157,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -275,6 +168,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -285,6 +179,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 
 	{
@@ -295,157 +190,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
-	},
-];
-
-export const thirdData: Product[] = [
-	{
-		id: 1,
-		img: "img-7.png",
-		brand: "Fashion",
-		title: "Chanel Belts Metal Gold & Black",
-		rating: 84,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-	{
-		id: 2,
-		img: "img-8.png",
-		brand: "Fashion",
-		title: "Argyle Cotton-blend Top",
-		rating: 68,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 3,
-		img: "img-17.png",
-		brand: "Fashion",
-		title: "Chanel Belts Metal Gold & Black",
-		rating: 76,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 4,
-		img: "img-11.png",
-		brand: "Fashion",
-		title: "Baby Ombré Cotton Dress",
-		rating: 125,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 5,
-		img: "img-12.png",
-		brand: "Fashion",
-		title: "Clover Flip Floral Skirt",
-		rating: 84,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 6,
-		img: "img-13.png",
-		brand: "Fashion",
-		title: "Dioriviera Shorts",
-		rating: 68,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 7,
-		img: "img-14.png",
-		brand: "Fashion",
-		title: "Dioriviera Shorts",
-		rating: 76,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 8,
-		img: "img-15.png",
-		brand: "Fashion",
-		title: "Disney 101 Dalmatians Cotton Jersey Dress",
-		rating: 125,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 9,
-		img: "img-16.png",
-		brand: "Fashion",
-		title: "EKD Cotton Silk Jacquard Sweater",
-		rating: 84,
-		newPrice: 22.5105,
-		oldPrice: 28,
-	},
-
-	{
-		id: 10,
-		img: "img-17.png",
-		brand: "Fashion",
-		title: "Givenchy Mini Shorts In Cotton",
-		rating: 68,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 11,
-		img: "img-18.png",
-		brand: "Fashion",
-		title: "Knit Sweater With Button Detail",
-		rating: 76,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 12,
-		img: "img-16.png",
-		brand: "Fashion",
-		title: "Logo Cotton Jersey T-shirt",
-		rating: 125,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 13,
-		img: "img-21.png",
-		brand: "Fashion",
-		title: "Logo Cotton Jersey T-shirt",
-		rating: 125,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 14,
-		img: "img-22.png",
-		brand: "Fashion",
-		title: "Large Dior Book Tote",
-		rating: 125,
-		newPrice: 22.51,
-		oldPrice: 28,
-	},
-
-	{
-		id: 15,
-		img: "img-20.png",
-		brand: "Fashion",
-		title: "Beachview Bucket Hat",
-		rating: 125,
-		newPrice: 22.51,
-		oldPrice: 28,
+		qty: 1,
 	},
 ];
 
@@ -458,6 +203,7 @@ export const popularProducts: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 	{
 		id: 2,
@@ -467,6 +213,7 @@ export const popularProducts: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 	{
 		id: 3,
@@ -476,6 +223,7 @@ export const popularProducts: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 	{
 		id: 4,
@@ -485,6 +233,7 @@ export const popularProducts: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 	{
 		id: 5,
@@ -494,6 +243,7 @@ export const popularProducts: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 	{
 		id: 6,
@@ -503,6 +253,7 @@ export const popularProducts: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 	{
 		id: 7,
@@ -512,6 +263,7 @@ export const popularProducts: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		qty: 1,
 	},
 ];
 
@@ -610,6 +362,7 @@ export const viewedProductList: Product[] = [
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
 		oldPrice: 28,
+		qty: 1,
 		newPrice: 22.51,
 	},
 	{
@@ -619,6 +372,7 @@ export const viewedProductList: Product[] = [
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
 		oldPrice: 28,
+		qty: 1,
 		newPrice: 22.51,
 	},
 	{
@@ -628,6 +382,7 @@ export const viewedProductList: Product[] = [
 		title: "Chanel Belts Metal Gold & Black",
 		rating: 84,
 		oldPrice: 28,
+		qty: 1,
 		newPrice: 22.51,
 	},
 	{
@@ -637,6 +392,7 @@ export const viewedProductList: Product[] = [
 		title: "Eternal N°5 Necklace",
 		rating: 84,
 		oldPrice: 28,
+		qty: 1,
 		newPrice: 22.51,
 	},
 	{
@@ -646,6 +402,7 @@ export const viewedProductList: Product[] = [
 		title: "Large Dior Book Tote",
 		rating: 84,
 		oldPrice: 28,
+		qty: 1,
 		newPrice: 22.51,
 	},
 	{
@@ -655,6 +412,7 @@ export const viewedProductList: Product[] = [
 		title: "Clover Flip Floral Skirt",
 		rating: 84,
 		oldPrice: 28,
+		qty: 1,
 		newPrice: 22.51,
 	},
 ];

@@ -9,12 +9,19 @@ import { CartService } from "../services/cart.service";
 })
 export class WishListComponent {
 	wishList: Product[] = [];
-	constructor(private wishListService: WishListService, private cartService: CartService) {
+	constructor(
+		private wishListService: WishListService,
+		private cartService: CartService
+	) {
 		this.wishList = this.wishListService.getWishList();
 	}
-  addToCart(item: Product) {
-    this.cartService.addCartList(item);
-    this.wishListService.removeWishProduct(item);
+	addToCart(item: Product) {
+		this.cartService.addCartList(item);
+		this.wishListService.removeWishProduct(item);
 		this.wishList = this.wishListService.getWishList();
-  }
+	}
+	removeWishProduct(item: Product) {
+		this.wishListService.removeWishProduct(item);
+		this.wishList = this.wishListService.getWishList();
+	}
 }
