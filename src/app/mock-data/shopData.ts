@@ -9,6 +9,10 @@ export interface Product {
 	qty: number;
 }
 
+export interface WishProduct extends Product {
+	wish: boolean;
+}
+
 export interface Category {
 	id: number;
 	title: string;
@@ -17,7 +21,7 @@ export interface Category {
 	link: string;
 }
 
-export const secondData: Product[] = [
+export const secondData: WishProduct[] = [
 	{
 		id: 1,
 		img: "img-7.png",
@@ -26,6 +30,7 @@ export const secondData: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 	{
@@ -36,6 +41,7 @@ export const secondData: Product[] = [
 		rating: 68,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -47,6 +53,7 @@ export const secondData: Product[] = [
 		rating: 76,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -58,6 +65,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -69,6 +77,7 @@ export const secondData: Product[] = [
 		rating: 84,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -80,6 +89,7 @@ export const secondData: Product[] = [
 		rating: 68,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -91,6 +101,7 @@ export const secondData: Product[] = [
 		rating: 76,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -102,6 +113,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -113,6 +125,7 @@ export const secondData: Product[] = [
 		rating: 84,
 		newPrice: 22.5105,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -124,6 +137,7 @@ export const secondData: Product[] = [
 		rating: 68,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -135,6 +149,7 @@ export const secondData: Product[] = [
 		rating: 76,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -146,6 +161,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -157,6 +173,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -168,6 +185,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -179,6 +197,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 
@@ -190,6 +209,7 @@ export const secondData: Product[] = [
 		rating: 125,
 		newPrice: 22.51,
 		oldPrice: 28,
+		wish: false,
 		qty: 1,
 	},
 ];

@@ -1,8 +1,10 @@
-import { Component, inject } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
+import { Router } from "@angular/router";
 import { postsData } from "src/app/mock-data/blogData";
 import {
 	Category,
 	Product,
+	WishProduct,
 	categoryList,
 	secondData,
 	viewedProductList,
@@ -15,15 +17,50 @@ import { PostData } from "src/app/shared/components/posts/posts.component";
 	selector: "first-shop-app",
 	templateUrl: "./shop.component.html",
 })
-export class ShopComponent {
+export class ShopComponent implements OnInit {
 	categoryList: Category[] = categoryList;
-	data: Product[] = secondData;
+	data!: WishProduct[];
 	viewedProductList: Product[] = viewedProductList;
 	postsData: PostData[] = postsData;
 	cartService = inject(CartService);
 	wishListService = inject(WishListService);
-	handleAddWishList(item: Product) {
-		this.wishListService.addWishList(item);
+
+	constructor(private router: Router) {}
+
+	ngOnInit() {
+		const temp: WishProduct[] = [];
+		this.wishListService.wishProduct$.subscribe((wishList) => {
+			for (const wish of secondData) {
+				let check = false;
+				for (const data of wishList) {
+					if (wish?.id === data.id) {
+						check = true;
+					}
+				}
+				if (check) {
+					temp.push({ ...wish, wish: true });
+				} else {
+					temp.push(wish);
+				}
+			}
+		});
+		this.data = temp;
+	}
+
+	handleAddWishList(product: WishProduct) {
+		if (product.wish) {
+			this.router.navigate(["/wishlist"]);
+			return;
+		}
+		this.wishListService.addWishList(product);
+		// fake new viewedProductList
+		const newList = this.data.map((item) => {
+			if (item.id === product.id) {
+				return { ...item, wish: true };
+			}
+			return item;
+		});
+		this.data = newList;
 	}
 	addToCart(item: Product) {
 		this.cartService.addCartList(item);

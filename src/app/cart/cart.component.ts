@@ -9,12 +9,13 @@ import { CartService } from "../services/cart.service";
 export class CartComponent implements OnInit {
 	productList!: Product[];
 	cartService = inject(CartService);
+	disableUpdateCart = false;
 	ngOnInit() {
-		this.cartService
-      .cart$
-			.subscribe((cart) => (this.productList = cart));
+		this.cartService.cart$.subscribe((cart) => (this.productList = cart));
 	}
 	removeProduct(product: Product): void {
 		this.cartService.removeProduct(product);
 	}
+	onDescreaseQty(item: Product) {}
+	onInscreaseQty(item: Product) {}
 }

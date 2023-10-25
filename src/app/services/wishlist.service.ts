@@ -6,16 +6,11 @@ import { BehaviorSubject, Observable } from "rxjs";
 	providedIn: "root",
 })
 export class WishListService {
-	private wishProductObs: BehaviorSubject<never[]> = new BehaviorSubject([]);
-	getWishList(): Observable<Product[]> {
-		let localItem = localStorage.getItem("wishlist");
-		if (localItem) {
-			this.wishProductObs = new BehaviorSubject(
-				JSON.parse(localStorage.getItem("wishlist") as string)
-			);
-		}
-		return this.wishProductObs.asObservable();
-	}
+	private wishProductSubject = new BehaviorSubject(
+		JSON.parse(localStorage.getItem("wishlist") as string) || []
+	);
+	wishProduct$ = this.wishProductSubject.asObservable();
+
 	addWishList(product: Product) {
 		let localItem = localStorage.getItem("wishlist");
 		let productList: Product[];
@@ -26,7 +21,7 @@ export class WishListService {
 		}
 		productList.push(product);
 		localStorage.setItem("wishlist", JSON.stringify(productList));
-		this.wishProductObs.next(productList as never);
+		this.wishProductSubject.next(productList as never);
 	}
 	removeWishProduct(product: Product) {
 		let localItem = localStorage.getItem("wishlist");
@@ -36,7 +31,7 @@ export class WishListService {
 				(item: Product) => product.id !== item.id
 			);
 			localStorage.setItem("wishlist", JSON.stringify(productList));
-			this.wishProductObs.next(productList as never);
+			this.wishProductSubject.next(productList as never);
 		}
 	}
 }

@@ -3,7 +3,7 @@ import { Product } from "src/app/mock-data/shopData";
 import { CartService } from "src/app/services/cart.service";
 import { HeaderService } from "src/app/services/header.service";
 import { WishListService } from "src/app/services/wishlist.service";
-import { Observable, of } from 'rxjs';
+import { Observable, of } from "rxjs";
 
 @Component({
 	selector: "header-app",
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 	scroll: boolean = false;
 	openClass: string = "";
 	wishList!: Product[];
-	cart$ = of<Product[]>([]);
+	cart: Product[] = [];
 	headers = [
 		{
 			content: "Home",
@@ -52,8 +52,7 @@ export class HeaderComponent implements OnInit {
 	];
 	cartService = inject(CartService);
 	wishListService = inject(WishListService);
-  headerService = inject(HeaderService);
-
+	headerService = inject(HeaderService);
 
 	@HostListener("window:scroll", ["$event"])
 	onScroll() {
@@ -73,14 +72,12 @@ export class HeaderComponent implements OnInit {
 		}
 	}
 	ngOnInit() {
-		this.wishListService
-			.getWishList()
-			.subscribe((wish) =>
-        this.wishList = wish
-      );
-		this.cart$ = this.cartService.cart$;
-    this.headerService
-      .getHeaderStyleObs()
-      .subscribe((style) => (this.headerStyle = style));
+		this.wishListService.wishProduct$.subscribe(
+			(wish) => (this.wishList = wish)
+		);
+		this.cartService.cart$.subscribe((cart) => (this.cart = cart));
+		this.headerService
+			.getHeaderStyleObs()
+			.subscribe((style) => (this.headerStyle = style));
 	}
 }

@@ -134,7 +134,7 @@
             </a>
             <div class="box-quick-view">
               <div class="quick-view">
-                <div (click)="handleAddWishList(item)" class="like-product cursor-pointer"></div>
+                <a (click)="handleAddWishList(item)" class="like-product cursor-pointer" [ngClass]="item.wish ? 'wish' : ''"></a>
                 <a routerLink="/" class="shuffle-product"></a>
                 <a routerLink="/" class="view-product"></a>
               </div>
