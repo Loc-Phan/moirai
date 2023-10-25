@@ -8,14 +8,45 @@ import { CartService } from "../services/cart.service";
 })
 export class CartComponent implements OnInit {
 	productList!: Product[];
+	totalPrice = 0;
 	cartService = inject(CartService);
-	disableUpdateCart = false;
+	disableUpdateCart = true;
 	ngOnInit() {
-		this.cartService.cart$.subscribe((cart) => (this.productList = cart));
+		this.cartService.cart$.subscribe((cart) => {
+			this.productList = cart;
+			this.totalPrice = cart.reduce(
+				(accumulator, currentValue) =>
+					accumulator + currentValue.qty * currentValue.newPrice,
+				0
+			);
+		});
 	}
 	removeProduct(product: Product): void {
 		this.cartService.removeProduct(product);
 	}
-	onDescreaseQty(item: Product) {}
-	onInscreaseQty(item: Product) {}
+	onDescreaseQty(item: Product) {
+		this.disableUpdateCart = false;
+		if (item.qty > 0) {
+			const newCart = this.productList.map((cartItem) => {
+				if (cartItem.id === item.id) {
+					return { ...cartItem, qty: item.qty - 1 };
+				}
+				return cartItem;
+			});
+			this.productList = newCart;
+		}
+	}
+	onInscreaseQty(item: Product) {
+		this.disableUpdateCart = false;
+		const newCart = this.productList.map((cartItem) => {
+			if (cartItem.id === item.id) {
+				return { ...cartItem, qty: item.qty + 1 };
+			}
+			return cartItem;
+		});
+		this.productList = newCart;
+	}
+	onUpdateCart() {
+		this.cartService.updateCart(this.productList);
+	}
 }

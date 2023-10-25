@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 	scroll: boolean = false;
 	openClass: string = "";
 	wishList!: Product[];
-	cart: Product[] = [];
+	cartQty: number = 0;
 	headers = [
 		{
 			content: "Home",
@@ -75,7 +75,12 @@ export class HeaderComponent implements OnInit {
 		this.wishListService.wishProduct$.subscribe(
 			(wish) => (this.wishList = wish)
 		);
-		this.cartService.cart$.subscribe((cart) => (this.cart = cart));
+		this.cartService.cart$.subscribe((cart) => {
+			this.cartQty = cart.reduce(
+				(accumulator, currentValue) => accumulator + currentValue.qty,
+				0
+			);
+		});
 		this.headerService
 			.getHeaderStyleObs()
 			.subscribe((style) => (this.headerStyle = style));

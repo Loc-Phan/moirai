@@ -17,6 +17,7 @@ import { BackToTopModule } from './shared/components/back-to-top/back-to-top.mod
 import { HeaderModule } from './shared/components/header/header.module';
 import { WishListModule } from './wishlist/wishlist-routing.module';
 import { CartModule } from './cart/cart-routing.module';
+import { CheckoutModule } from './checkout/checkout-routing.module';
 
 @NgModule({
 	declarations: [AppComponent, FooterComponent],
@@ -37,6 +38,7 @@ import { CartModule } from './cart/cart-routing.module';
 		BackToTopModule,
 		WishListModule,
 		CartModule,
+		CheckoutModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
