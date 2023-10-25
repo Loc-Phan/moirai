@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from "ngx-toastr";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
@@ -38,7 +40,9 @@ import { CheckoutModule } from './checkout/checkout-routing.module';
 		BackToTopModule,
 		WishListModule,
 		CartModule,
-		CheckoutModule,
+    CheckoutModule,
+    BrowserAnimationsModule,
+		ToastrModule.forRoot(),
 	],
 	providers: [],
 	bootstrap: [AppComponent],

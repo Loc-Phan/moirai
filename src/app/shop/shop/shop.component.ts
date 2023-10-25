@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from "@angular/core";
 import { Router } from "@angular/router";
+import { ToastrService } from "ngx-toastr";
 import { postsData } from "src/app/mock-data/blogData";
 import {
 	Category,
@@ -25,7 +26,7 @@ export class ShopComponent implements OnInit {
 	cartService = inject(CartService);
 	wishListService = inject(WishListService);
 
-	constructor(private router: Router) {}
+	constructor(private router: Router, private toastr: ToastrService) {}
 
 	ngOnInit() {
 		const temp: WishProduct[] = [];
@@ -60,9 +61,11 @@ export class ShopComponent implements OnInit {
 			}
 			return item;
 		});
-		this.data = newList;
+    this.data = newList;
+    this.toastr.success("Add to wishlist successfully!");
 	}
 	addToCart(item: Product) {
-		this.cartService.addCartList(item);
+    this.cartService.addCartList(item);
+    this.toastr.success("Add to cart successfully!");
 	}
 }

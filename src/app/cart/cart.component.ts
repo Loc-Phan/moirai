@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from "@angular/core";
 import { Product } from "../mock-data/shopData";
 import { CartService } from "../services/cart.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
 	selector: "cart-component",
@@ -11,6 +12,7 @@ export class CartComponent implements OnInit {
 	totalPrice = 0;
 	cartService = inject(CartService);
 	disableUpdateCart = true;
+	constructor(private toastr: ToastrService) {}
 	ngOnInit() {
 		this.cartService.cart$.subscribe((cart) => {
 			this.productList = cart;
@@ -22,7 +24,8 @@ export class CartComponent implements OnInit {
 		});
 	}
 	removeProduct(product: Product): void {
-		this.cartService.removeProduct(product);
+    this.cartService.removeProduct(product);
+		this.toastr.success("Remove to cart successfully!");
 	}
 	onDescreaseQty(item: Product) {
 		this.disableUpdateCart = false;
@@ -48,5 +51,6 @@ export class CartComponent implements OnInit {
 	}
 	onUpdateCart() {
 		this.cartService.updateCart(this.productList);
+		this.toastr.success("Update cart successfully!");
 	}
 }

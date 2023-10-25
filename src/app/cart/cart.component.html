@@ -59,7 +59,7 @@
           <p class="text-[rgba(251,203,59,1)]">${{(totalPrice).toFixed(2)}}</p>
         </div>
         <div class="mt-4">
-          <button class="btn btn-green-full cursor-pointer" routerLink="/checkout">
+          <button [disabled]="productList.length===0" class="btn btn-green-full cursor-pointer" routerLink="/checkout">
             Checkout
           </button>
         </div>
