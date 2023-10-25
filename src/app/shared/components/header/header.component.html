@@ -55,7 +55,7 @@
         </div>
         <div class="cursor-pointer w-7 h-7 relative" routerLink="/cart">
           <cart-icon-component></cart-icon-component>
-          <div *ngIf="cart.length>0"
+          <div *ngIf="(cart$ | async) as cart"
             class="absolute -top-2 -right-3 flex justify-center items-center w-[22px] h-[22px] rounded-full bg-[rgba(251,203,59,1)] text-sm text-[#222222]">
             {{cart.length}}</div>
         </div>

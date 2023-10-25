@@ -6,16 +6,9 @@ import { BehaviorSubject, Observable } from "rxjs";
 	providedIn: "root",
 })
 export class CartService {
-	private cartObs: BehaviorSubject<never[]> = new BehaviorSubject([]);
-	getCartList(): Observable<Product[]> {
-		let localItem = localStorage.getItem("cart");
-		if (localItem) {
-			this.cartObs = new BehaviorSubject(
-				JSON.parse(localStorage.getItem("cart") as string)
-			);
-		}
-		return this.cartObs.asObservable();
-	}
+  private cartSubject = new BehaviorSubject<Product[]>([]);
+  cart$ = this.cartSubject.asObservable();
+
 	addCartList(product: Product) {
 		let localItem = localStorage.getItem("cart");
 		let productList: Product[];
@@ -26,7 +19,7 @@ export class CartService {
 		}
 		productList.push(product);
 		localStorage.setItem("cart", JSON.stringify(productList));
-		this.cartObs.next(productList as never);
+		this.cartSubject.next(productList);
 	}
 	removeProduct(product: Product) {
 		let localItem = localStorage.getItem("cart");
@@ -36,7 +29,7 @@ export class CartService {
 				(item: Product) => product.id !== item.id
 			);
       localStorage.setItem("cart", JSON.stringify(productList));
-      this.cartObs.next(productList as never);
+      this.cartSubject.next(productList);
 		}
 	}
 }
