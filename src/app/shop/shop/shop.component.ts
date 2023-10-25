@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { postsData } from "src/app/mock-data/blogData";
 import {
 	Category,
@@ -20,11 +20,12 @@ export class ShopComponent {
 	data: Product[] = secondData;
 	viewedProductList: Product[] = viewedProductList;
 	postsData: PostData[] = postsData;
-	constructor(private wishListService: WishListService, private cartService: CartService) {}
-  handleAddWishList(item: Product) {
-    this.wishListService.addWishList(item);
-  }
-  addToCart(item: Product) {
-    this.cartService.addCartList(item);
-  }
+	cartService = inject(CartService);
+	wishListService = inject(WishListService);
+	handleAddWishList(item: Product) {
+		this.wishListService.addWishList(item);
+	}
+	addToCart(item: Product) {
+		this.cartService.addCartList(item);
+	}
 }

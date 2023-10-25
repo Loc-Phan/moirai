@@ -1,36 +1,32 @@
 import { Injectable } from "@angular/core";
 import { Product } from "../mock-data/shopData";
+import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable({
 	providedIn: "root",
 })
 export class CartService {
-	constructor() {}
-	getCartList(): Product[] {
+	private cartObs: BehaviorSubject<never[]> = new BehaviorSubject([]);
+	getCartList(): Observable<Product[]> {
 		let localItem = localStorage.getItem("cart");
-		if (localItem == null) {
-			return [];
-		} else {
-			return JSON.parse(localStorage.getItem("cart") as string);
+		if (localItem) {
+			this.cartObs = new BehaviorSubject(
+				JSON.parse(localStorage.getItem("cart") as string)
+			);
 		}
+		return this.cartObs.asObservable();
 	}
 	addCartList(product: Product) {
 		let localItem = localStorage.getItem("cart");
-		let productList: Product[] = [];
-		if (localItem) {
-			let tempProductList: Product[] = JSON.parse(localItem);
-      if (tempProductList.length === 0) {
-        productList.push(product);
-			}
-			tempProductList.forEach((item) => {
-				if (item.id == product.id) {
-					productList.push({ ...item, qty: item?.qty + 1 });
-				} else {
-					productList.push(product);
-				}
-			});
+		let productList: Product[];
+		if (localItem == null) {
+			productList = [];
+		} else {
+			productList = JSON.parse(localItem);
 		}
+		productList.push(product);
 		localStorage.setItem("cart", JSON.stringify(productList));
+		this.cartObs.next(productList as never);
 	}
 	removeProduct(product: Product) {
 		let localItem = localStorage.getItem("cart");
@@ -39,7 +35,8 @@ export class CartService {
 			productList = JSON.parse(localItem).filter(
 				(item: Product) => product.id !== item.id
 			);
-			localStorage.setItem("cart", JSON.stringify(productList));
+      localStorage.setItem("cart", JSON.stringify(productList));
+      this.cartObs.next(productList as never);
 		}
 	}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { Product } from "../mock-data/shopData";
 import { CartService } from "../services/cart.service";
 
@@ -8,12 +8,13 @@ import { CartService } from "../services/cart.service";
 })
 export class CartComponent implements OnInit {
 	productList!: Product[];
-	constructor(private cartService: CartService) {}
-	ngOnInit(): void {
-		this.productList = this.cartService.getCartList();
+	cartService = inject(CartService);
+	ngOnInit() {
+		this.cartService
+			.getCartList()
+			.subscribe((cart) => (this.productList = cart));
 	}
 	removeProduct(product: Product): void {
 		this.cartService.removeProduct(product);
-		this.productList = this.cartService.getCartList();
 	}
 }

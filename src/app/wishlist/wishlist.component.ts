@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { Product } from "../mock-data/shopData";
 import { WishListService } from "../services/wishlist.service";
 import { CartService } from "../services/cart.service";
@@ -7,21 +7,26 @@ import { CartService } from "../services/cart.service";
 	selector: "wishlist-component",
 	templateUrl: "wishlist.component.html",
 })
-export class WishListComponent {
+export class WishListComponent implements OnInit {
 	wishList: Product[] = [];
-	constructor(
-		private wishListService: WishListService,
-		private cartService: CartService
-	) {
-		this.wishList = this.wishListService.getWishList();
+	cartService = inject(CartService);
+	wishListService = inject(WishListService);
+	ngOnInit() {
+		this.wishListService
+			.getWishList()
+			.subscribe((wish) => (this.wishList = wish));
 	}
 	addToCart(item: Product) {
 		this.cartService.addCartList(item);
 		this.wishListService.removeWishProduct(item);
-		this.wishList = this.wishListService.getWishList();
+		this.wishListService
+			.getWishList()
+			.subscribe((wish) => (this.wishList = wish));
 	}
 	removeWishProduct(item: Product) {
 		this.wishListService.removeWishProduct(item);
-		this.wishList = this.wishListService.getWishList();
+		// this.wishListService
+		// 	.getWishList()
+		// 	.subscribe((wish) => (this.wishList = wish));
 	}
 }

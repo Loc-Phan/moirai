@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject, OnInit } from "@angular/core";
+import { Component, HostListener, Inject, OnInit, inject } from "@angular/core";
 import { Product } from "src/app/mock-data/shopData";
 import { CartService } from "src/app/services/cart.service";
 import { HeaderService } from "src/app/services/header.service";
@@ -49,11 +49,9 @@ export class HeaderComponent implements OnInit {
 			url: "/contact",
 		},
 	];
-	constructor(
-		@Inject(HeaderService) headerService: HeaderService,
-		private wishListService: WishListService,
-		private cartService: CartService
-	) {
+	cartService = inject(CartService);
+	wishListService = inject(WishListService);
+	constructor(@Inject(HeaderService) headerService: HeaderService) {
 		headerService
 			.getHeaderStyleObs()
 			.subscribe((style) => (this.headerStyle = style));
@@ -76,7 +74,9 @@ export class HeaderComponent implements OnInit {
 		}
 	}
 	ngOnInit() {
-		this.wishList = this.wishListService.getWishList();
-		this.cart = this.cartService.getCartList();
+		this.wishListService
+			.getWishList()
+			.subscribe((wish) => (this.wishList = wish));
+		this.cartService.getCartList().subscribe((cart) => (this.cart = cart));
 	}
 }
