@@ -11,7 +11,7 @@ export class CartComponent implements OnInit {
 	cartService = inject(CartService);
 	ngOnInit() {
 		this.cartService
-			.getCartList()
+      .cart$
 			.subscribe((cart) => (this.productList = cart));
 	}
 	removeProduct(product: Product): void {
